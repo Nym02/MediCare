@@ -1,0 +1,128 @@
+/* ------------media query-------------- */
+
+@media (max-width: 768px) {
+  .main-menu .res-menu {
+    display: block;
+  }
+  .main-menu .res-menu .logo2 {
+    margin-top: 5px;
+  }
+  .main-menu ul {
+    display: none;
+  }
+  .main-menu ul li {
+    float: none;
+  }
+  .main-menu ul ul {
+    position: inherit;
+  }
+  .main-menu ul ul li {
+    width: 100%;
+  }
+
+  .getStarted {
+    height: 500px;
+    width: auto;
+  }
+
+  .doc-quote h1 {
+    font-size: 40px;
+  }
+  .doc-quote h1 span {
+    font-size: 40px;
+  }
+  .doc-quote h3 {
+    margin: 27px 0;
+
+    font-size: 18px;
+  }
+
+  /* --------intro section ---------- */
+  .introDoc {
+    padding: 40px 0;
+  }
+  .introDoc .introDoc__text {
+    width: 100%;
+  }
+  .introDoc .introDoc__text h2 {
+    font-size: 35px;
+  }
+  .introDoc__img {
+    margin-left: -60px;
+  }
+  .introDoc .introDoc__text p {
+    font-size: 18px;
+  }
+  .introDoc .introDoc__img img {
+    width: 260px;
+  }
+
+  /* ------service section--------- */
+  .service__contents .service__contents-1 {
+    width: 90%;
+  }
+}
+
+.active {
+  font-weight: bold;
+}
+@media (max-width: 556px) {
+  .doc-quote h1 {
+    font-size: 35px;
+  }
+  .doc-quote h1 span {
+    font-size: 35px;
+  }
+  .doc-quote h3 {
+    margin: 28px 0;
+    font-size: 15px;
+  }
+  .doc-quote button {
+    padding: 7px 26px;
+
+    font-size: 13px;
+  }
+
+  /* --------intro section--------- */
+  .introDoc {
+    padding: 20px 0;
+  }
+  .introDoc .introDoc__img img {
+    width: 220px;
+  }
+}
+@media (max-width: 441px) {
+  .header-area .logo-bar .signin .btn {
+    margin-left: 9px;
+    padding: 3px 10px;
+  }
+  .doc-quote h1 {
+    font-size: 28px;
+  }
+  .doc-quote h1 span {
+    font-size: 28px;
+  }
+  .doc-quote h3 {
+    margin: 28px 0;
+    font-size: 14px;
+  }
+  /* --------intro section ----- */
+  .introDoc .introDoc__img img {
+    width: 165px;
+  }
+}
+@media (max-width: 352px) {
+  .header-area .logo-bar .signin a:last-child {
+    margin-right: 22px;
+  }
+  .doc-quote h1 {
+    font-size: 25px;
+  }
+  .doc-quote h1 span {
+    font-size: 25px;
+  }
+  .doc-quote h3 {
+    margin: 28px 0;
+    font-size: 13px;
+  }
+}

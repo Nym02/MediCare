@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container1 {
+  width: 90%;
+  margin: auto;
+}
+/* -----------------------------header area starts here---------------- */
+.header-area {
+}
+
+/* --------------------------logo area starts here---------------- */
+.header-area .logo-bar {
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+.header-area .logo-bar .logo {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.header-area .logo-bar .logo a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-area .logo-bar .signin {
+  float: right;
+  width: 60%;
+}
+.header-area .logo-bar .signin button {
+  background-color: white;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin button:hover {
+  background-color: #343a40;
+  color: white;
+}
+.header-area .logo-bar .signin a:last-child {
+  margin-right: 50px;
+}
+.header-area .logo-bar .signin .btn {
+  margin-left: 15px;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin .fas {
+  font-size: 20px;
+}
+
+/* ----------------logo area ends here----------------------- */
+
+/* .menu-search {
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+} */
+.main-menu {
+  background-color: #000;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu ul li {
+  float: left;
+  position: relative;
+  z-index: 100000;
+}
+.main-menu::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.main-menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.main-menu ul li:hover a {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* resposive menu  bar*/
+.main-menu .res-menu {
+  background-color: #4b4b4b;
+  padding: 7px 0;
+  overflow: hidden;
+  display: none;
+}
+.main-menu .res-menu .logo2 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  float: left;
+  margin-left: 40px;
+}
+.main-menu .res-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  float: right;
+  margin-right: 40px;
+}
+
+/* creating sub menu */
+
+.main-menu ul ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: maroon;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.main-menu ul ul li {
+  float: none;
+  width: 150px;
+}
+.main-menu ul ul li a {
+}
+.main-menu ul ul li:hover {
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+}
+.content p {
+  font-size: 20px;
+  font-family: tahoma;
+}
+
+.content a {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+
+  text-decoration: none;
+  color: #fff;
+  background: blue;
+  padding: 15px;
+}
+
+/* -------get started area starts here------ */
+
+.getStarted {
+  background-image: url('../img/doc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 900px;
+  width: auto;
+  margin-bottom: 50px;
+  position: relative;
+}
+.doc-quote {
+  width: 50%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.doc-quote h1 {
+  font-size: 60px;
+  text-transform: capitalize;
+}
+.doc-quote h1 span {
+  font-size: 70px;
+  text-transform: capitalize;
+  color: rgb(117, 9, 9);
+}
+.doc-quote h3 {
+  margin: 30px 0;
+  color: darkslategrey;
+  font-size: 22px;
+}
+.doc-quote button {
+  padding: 7px 30px;
+  background-color: crimson;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 15px;
+  border: 1px solid;
+  border-radius: 6px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+/* ------introDoc section starts here----------- */
+.introDoc {
+  padding: 80px 0;
+}
+.introDoc .introDoc__text {
+  width: 50%;
+  float: left;
+}
+.introDoc .introDoc__text h2 {
+  font-size: 40px;
+  border-bottom: 1px solid rgba(172, 14, 14, 0.918);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.introDoc .introDoc__text p {
+  text-align: justify;
+  margin: 70px 0px;
+}
+.introDoc .introDoc__img {
+  overflow: hidden;
+
+  position: relative;
+}
+.introDoc .introDoc__img img {
+  width: 300px;
+}
+.introDoc .introDoc__img .introDoc__img-1 {
+  display: inline-block;
+  position: inherit;
+  left: 31%;
+}
+.introDoc .introDoc__img .introDoc__img-2 {
+  display: inline-block;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+}
+
+/* -------Service section starts here------- */
+
+.service {
+  background-image: url('../img/service.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+.service__header {
+}
+.service__header h2 {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 40px;
+}
+.service__contents {
+}
+.service__contents .service__contents-1 {
+  width: 50%;
+  margin: auto;
+  border: 1px solid red;
+  padding: 49px;
+}
+.service__contents .service__contents-1 h3 {
+  color: rgb(18, 89, 202);
+  /* border-bottom: 1px solid green; */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.service__contents-1 p {
+  margin-top: 30px;
+}
+.service__contents-1 p span {
+  font-weight: bold;
+  color: rgb(196, 22, 22);
+}
+
+/* review section */
+.reviews {
+  /* background-image: url('../img/service.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; */
+  min-height: 500px;
+}
+.service__contents .review__contents-1 {
+  width: 50%;
+  margin: auto;
+  border: 1px solid transparent;
+  padding: 49px;
+}

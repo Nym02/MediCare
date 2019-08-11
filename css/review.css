@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.container1 {
+  width: 90%;
+  margin: auto;
+}
+/* -----------------------------header area starts here---------------- */
+.header-area {
+}
+
+/* --------------------------logo area starts here---------------- */
+.header-area .logo-bar {
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+}
+.header-area .logo-bar .logo {
+  float: left;
+  width: 40%;
+  text-align: center;
+}
+.header-area .logo-bar .logo a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-area .logo-bar .signin {
+  float: right;
+  width: 60%;
+}
+.header-area .logo-bar .signin button {
+  background-color: white;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin button:hover {
+  background-color: #343a40;
+  color: white;
+}
+.header-area .logo-bar .signin a:last-child {
+  margin-right: 50px;
+}
+.header-area .logo-bar .signin .btn {
+  margin-left: 15px;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin .fas {
+  font-size: 20px;
+}
+
+/* ----------------logo area ends here----------------------- */
+
+/* .menu-search {
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+  } */
+.main-menu {
+  background-color: #000;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu ul li {
+  float: left;
+  position: relative;
+  z-index: 100000;
+}
+.main-menu::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.main-menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+.main-menu ul li:hover a {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* resposive menu  bar*/
+.main-menu .res-menu {
+  background-color: #4b4b4b;
+  padding: 7px 0;
+  overflow: hidden;
+  display: none;
+}
+.main-menu .res-menu .logo2 {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  float: left;
+  margin-left: 40px;
+}
+.main-menu .res-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+  float: right;
+  margin-right: 40px;
+}
+
+/* creating sub menu */
+
+.main-menu ul ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: maroon;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.main-menu ul ul li {
+  float: none;
+  width: 150px;
+}
+.main-menu ul ul li a {
+}
+.main-menu ul ul li:hover {
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+}
+.content p {
+  font-size: 20px;
+  font-family: tahoma;
+}
+
+.content a {
+  position: fixed;
+  bottom: 0;
+  right: 20px;
+
+  text-decoration: none;
+  color: #fff;
+  background: blue;
+  padding: 15px;
+}

@@ -1,0 +1,530 @@
+body
+{
+  margin: 0;
+  padding: 0;
+}
+.container1
+{
+  width: 70%;
+  margin:auto;
+}
+/* -----------------------------header area starts here---------------- */
+.header-area
+{
+
+}
+
+
+/* --------------------------logo area starts here---------------- */
+.header-area .logo-bar
+{
+  overflow: hidden;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  overflow: hidden;
+
+}
+.header-area .logo-bar .logo
+{
+  float: left;
+  width: 40%;
+  text-align: center;
+
+}
+.header-area .logo-bar .logo a
+{
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-area .logo-bar .signin
+{
+  float: right;
+  width: 60%;
+
+
+}
+.header-area .logo-bar .signin button
+{
+  background-color: white;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin button:hover
+{
+  background-color: #343A40;
+  color: white;
+}
+.header-area .logo-bar .signin a:last-child
+{
+  margin-right: 250px;
+}
+.header-area .logo-bar .signin .btn
+{
+  margin-left: 15px;
+  padding: 5px 20px;
+}
+.header-area .logo-bar .signin .fas
+{
+  font-size: 20px;
+
+}
+
+/* ----------------logo area ends here----------------------- */
+
+.menu-search
+{
+  border-bottom: 1px solid grey;
+  padding: 10px 0;
+}
+.main-menu
+{
+
+  float: left;
+
+
+}
+
+.main-menu ul
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 300px;
+  z-index: 99999;
+}
+.main-menu ul li
+{
+  float: left;
+  position: relative;
+}
+.main-menu::after
+{
+  content: ' ';
+  display: block;
+  clear: both;
+}
+.main-menu ul li a
+{
+  display: block;
+  text-decoration: none;
+  color:#000;
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  font-size: 15px;
+}
+.main-menu ul li:hover
+{
+  /* background-color: #8e44ad; */
+}
+/* creating sub menu */
+
+.main-menu ul ul
+{
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background: #F1F2F4;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+
+}
+.main-menu ul ul li
+{
+  float: none;
+  width: 150px;
+
+
+}
+
+.active
+{
+  font-weight: bold;
+}
+
+
+/* ------------search box ----------------- */
+.search
+{
+  text-align: center;
+  overflow: hidden;
+}
+.search input[type="text"]
+{
+  margin-left: 150px;
+  border-bottom: 1px solid grey;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.search button[type="button"]
+{
+  margin-left: -30px;
+  border: none;
+  outline:none;
+  background-color: #fff;
+  cursor: pointer;
+}
+/* ---------------header area ends here---------------- */
+
+
+
+/* ------slider area starts here-------------- */
+
+.owl-carousel img
+{
+  height: 400px;
+  width: 70%;
+
+}
+/* ------slider area ends here-------------- */
+#particles-js
+{
+  background-image: url('../img/book7.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 1920px;
+  height: 900px;
+
+
+}
+#particles-js .particle-overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+#particles-js h1
+{
+  text-align: center;
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  transform:translate(-50%,-50%);
+  color: #fff;
+}
+.quote-slider blockquote
+{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%,-50%);
+}
+/* ===================================================
+ ---bookfair2019 books starts---
+=================================================== */
+.bookfair19
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.bf19books-title
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.bf19books-title h3
+{
+  margin-left: -20px;
+}
+.bf19books-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bf19books-list
+{
+  text-align: center;
+}
+.bf19books-list img
+{
+  width: 132px;
+  height: 187px;
+}
+
+.bf19books-list .bf19book1
+{
+  width: 150px;
+  height: 360px;
+}
+.bf19book1 .bf19-content
+{
+  min-height: 305px;
+}
+.bf19book1 .bf19-content h5
+{
+  padding-top: 15px;
+
+  font-size: 20px;
+}
+.bf19book1 .bf19-content p
+{
+  font-weight: normal;
+  font-size: 15px;
+  padding-top: 10px;
+}
+.bf19book1 .bf19-content a
+{
+  text-decoration: none;
+  color: #000;
+}
+/* ===================================================
+ ---bookfair2019 books ends---
+=================================================== */
+
+
+/* =======================================================
+---new book list starts here-----
+======================================================= */
+.newbooks
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.newbooks-title /*--new books title--*/
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.newbooks-title h3
+{
+  margin-left: -20px;
+}
+.newbooks-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.newbooks-list
+{
+  text-align: center;
+
+
+}
+.newbooks-list .nbook1
+{
+  width: 150px;
+  height: 360px;
+}
+.newbooks-list img
+{
+  margin: auto;
+  width: 132px;
+  height: 187px;
+}
+.nbook1 .nbook1-content
+{
+  min-height: 305px;
+}
+.nbook1 .nbook1-content h5
+{
+  padding-top: 15px;
+
+  font-size: 20px;
+}
+.nbook1 .nbook1-content p
+{
+  font-weight: normal;
+  font-size: 15px;
+  padding-top: 10px;
+}
+/* =======================================================
+---new book list ends here-----
+======================================================= */
+/* -----extra classes----- */
+
+
+
+/* ----jafar iqbal books starts---- */
+.jafariqbal
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.jfbooks-title /*--jafar iqbal books title--*/
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.jfbooks-title h3
+{
+  margin-left: -20px;
+}
+.jfbooks-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.jfbooks-list
+{
+  text-align: center;
+}
+.jfbooks-list img
+{
+  width: 132px;
+  height: 187px;
+}
+.jfbooks-list .jfbook1
+{
+  width: 150px;
+  height: 360px;
+}
+.jfbook1 .jfbook1-content
+{
+  min-height: 305px;
+}
+/* ----jafar iqbal books ends---- */
+
+
+
+/* ---anisul haque books starts */
+.anisulH
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.ahbooks-title /*--jafar iqbal books title--*/
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.ahbooks-title h3
+{
+  margin-left: -20px;
+}
+.ahbooks-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.ahbooks-list
+{
+  text-align: center;
+}
+.ahbooks-list img
+{
+  width: 132px;
+  height: 187px;
+}
+.ahbooks-list .ahbook1
+{
+  width: 150px;
+  height: 360px;
+}
+/* ---anisul haque books ends */
+
+
+/* ----science fiction books starts---- */
+.sciencefiction
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.sfbooks-title
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.sfbooks-title h3
+{
+  margin-left: -20px;
+}
+.sfbooks-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.sfbooks-list
+{
+  text-align: center;
+}
+.sfbooks-list img
+{
+  width: 132px;
+  height: 187px;
+}
+.sfbooks-list .sfbook1
+{
+  width: 150px;
+  height: 360px;
+}
+.sfbook1 .sfbook1-content
+{
+  min-height: 305px;
+}
+/* ----science fiction books ends---- */
+/* children books starts */
+.childrenbooks
+{
+  box-shadow: 0 0 10px;
+  padding: 30px 50px;
+  margin: 30px 0;
+
+}
+.childrenbooks-title
+{
+  position: relative;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.childrenbooks-title h3
+{
+  margin-left: -20px;
+}
+.childrenbooks-title a
+{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.childrenbooks-list
+{
+  text-align: center;
+}
+.childrenbooks-list img
+{
+  width: 132px;
+  height: 187px;
+}
+.childrenbooks-list .childrenbook1
+{
+  width: 150px;
+  height: 360px;
+}
+.childrenbook1 .childrenbook1-content
+{
+  min-height: 305px;
+}
+/* children books ends */
