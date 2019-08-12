@@ -1,3 +1,9 @@
+<?php
+  session_start();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,8 +35,8 @@
         <!---logo area starts----->
         <div class="logo"><a href="index1.html">MediCare</a></div>
         <div class="signin text-right">
-          <a href="login.html" class="btn btn-outline-dark "> Login</a>
-          <a href="registration.html" class="btn btn-outline-dark"> Register</a>
+          <a href="login.php" class="btn btn-outline-dark "> Login</a>
+          <a href="signup.php" class="btn btn-outline-dark"> Register</a>
         </div>
       </div>
       <!-------logo area ends----->

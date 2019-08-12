@@ -30,28 +30,28 @@
     <section class="form">
         <div class="form-body">
                 
-                    <form action="#" onsubmit="return regValidation();" class="form-area">
+                    <form action="includes/signup.inc.php" method="POST" onsubmit="return regValidation();" class="form-area">
                             <div class="form-header">
                                     <h3>Registration</h3>
                                 </div>
                         <input 
                         type="text"
                         id="fullName"
-                        name="fName" 
+                        name="fullName" 
                         placeholder="Enter Name">
                         <label id="fullName__label1"></label>
 
-                        <input type="text" id="uname" placeholder="Enter Username">
+                        <input type="text" id="uname" name="uname" placeholder="Enter Username">
                         <label id="userName__label1"></label>
 
-                        <input type="email" id="uemail" placeholder="Enter Email">
+                        <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
                         <label id="email__label1"></label>
 
-                        <input type="password" name="" id="upass" placeholder="Enter Password">
+                        <input type="password" name="upass" id="upass" placeholder="Enter Password">
                         <label id="upass__label1"></label>
 
-                        <input type="text"  id="uphone" placeholder="Enter Phone Number"> 
-                        <label id="uphone__label1"></label>
+                        <!-- <input type="text"  id="uphone" placeholder="Enter Phone Number"> 
+                        <label id="uphone__label1"></label> -->
 
                         
 
@@ -63,7 +63,7 @@
         />
                     </form>
                     <div class="form-footer">
-                            <a href="login.html">Login With An Existing Account.</a>
+                            <a href="login.php">Login With An Existing Account.</a>
                           </div>
         </div>
     </section>

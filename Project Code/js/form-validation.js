@@ -3,13 +3,13 @@ function regValidation() {
   var uUserName = document.getElementById('uname').value;
   var userEmail = document.getElementById('uemail').value;
   var userPassword = document.getElementById('upass').value;
-  var userPhoneNumber = document.getElementById('uphone').value;
+  // var userPhoneNumber = document.getElementById('uphone').value;
 
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
-  var userNameRegx = /^[a-z0-9_]{4,}$/;
+  var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
   var passwordRegx = /^[0-9a-zA-Z\.\-_$%&*#@!]{8,32}$/;
-  var phoneNumRegx = /^[0-9]{6,}$/;
+  // var phoneNumRegx = /^[0-9]{6,}$/;
 
   // full name validation
 
@@ -67,23 +67,57 @@ function regValidation() {
     return false;
   }
   //Phone number Validation
-  if (phoneNumRegx.test(userPhoneNumber)) {
-    document.getElementById('uphone__label1').style.visibility = 'hidden';
-    document.getElementById('uphone__label1').style.color = 'green';
-    document.getElementById('uphone').style.border = '1px solid green';
-    document.getElementById('uphone__label1').innerHTML = 'valid';
+  // if (phoneNumRegx.test(userPhoneNumber)) {
+  //   document.getElementById('uphone__label1').style.visibility = 'hidden';
+  //   document.getElementById('uphone__label1').style.color = 'green';
+  //   document.getElementById('uphone').style.border = '1px solid green';
+  //   document.getElementById('uphone__label1').innerHTML = 'valid';
 
-    console.log('was submitted');
-  } else {
-    document.getElementById('uphone__label1').style.visibility = 'visible';
-    document.getElementById('uphone__label1').style.color = 'red';
-    document.getElementById('uphone').style.border = '1px solid red';
-    document.getElementById('uphone__label1').innerHTML =
-      'Enter a valid phone number. Phone number can contain only NUMBERS  (0-9)';
+  //   console.log('was submitted');
+  // } else {
+  //   document.getElementById('uphone__label1').style.visibility = 'visible';
+  //   document.getElementById('uphone__label1').style.color = 'red';
+  //   document.getElementById('uphone').style.border = '1px solid red';
+  //   document.getElementById('uphone__label1').innerHTML =
+  //     'Enter a valid phone number. Phone number can contain only NUMBERS  (0-9)';
+  //   return false;
+  // }
+}
+//Login form validation
+function loginValidation(){
+  var userEmail = document.getElementById('userEmail').value;
+  var userPassword = document.getElementById('userPassword').value;
+
+  var userEmailRegx = /^$/;
+  var userPasswordRegx = /^$/;
+
+  if((!userEmailRegx.test(userEmail))){
+    document.getElementById('email__label1').style.visibility = 'hidden';
+    document.getElementById('userEmail').style.border = '1px solid green';
+  }
+  else{
+    
+
+    document.getElementById('userEmail').style.border = '1px solid red';
+    document.getElementById('email__label1').style.color = 'red';
+    document.getElementById('email__label1').innerHTML= 'Enter Your Email/Username';
+    document.getElementById('email__label1').style.visibility = 'visible';
     return false;
   }
+  
+   if((userPasswordRegx.test(userPassword))){
+    document.getElementById('userPassword').style.border = '1px solid red';
+    document.getElementById('pass__label1').style.color = 'red';
+    document.getElementById('pass__label1').innerHTML= 'Enter Your Password';
+    document.getElementById('pass__label1').style.visibility = 'visible';
+    return false;
+    
+  }
+  else{
+    document.getElementById('pass__label1').style.visibility = 'hidden';
+    document.getElementById('userPassword').style.border = '1px solid green';
+  }
 }
-
 //Book entry form validation
 
 function bookEntryForm() {
