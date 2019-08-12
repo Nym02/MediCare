@@ -9,6 +9,9 @@ if(isset($_POST['submit'])){
     $userPassword = $_POST['upass'];
 
 
+    $sql = "INSERT INTO users(userFullName, userName, userEmail, userPassword)  VALUES (?,?,?,?)";
+    $stmt = mysqli_stmt_init($conn);
+
 
 
 }
