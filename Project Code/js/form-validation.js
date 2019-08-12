@@ -6,7 +6,7 @@ function regValidation() {
   // var userPhoneNumber = document.getElementById('uphone').value;
 
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
-  var userNameRegx = /^[a-z0-9_]{4,}$/;
+  var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
   var passwordRegx = /^[0-9a-zA-Z\.\-_$%&*#@!]{8,32}$/;
   // var phoneNumRegx = /^[0-9]{6,}$/;
