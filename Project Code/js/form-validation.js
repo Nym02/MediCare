@@ -83,7 +83,41 @@ function regValidation() {
   //   return false;
   // }
 }
+//Login form validation
+function loginValidation(){
+  var userEmail = document.getElementById('userEmail').value;
+  var userPassword = document.getElementById('userPassword').value;
 
+  var userEmailRegx = /^$/;
+  var userPasswordRegx = /^$/;
+
+  if((!userEmailRegx.test(userEmail))){
+    document.getElementById('email__label1').style.visibility = 'hidden';
+    document.getElementById('userEmail').style.border = '1px solid green';
+  }
+  else{
+    
+
+    document.getElementById('userEmail').style.border = '1px solid red';
+    document.getElementById('email__label1').style.color = 'red';
+    document.getElementById('email__label1').innerHTML= 'Enter Your Email/Username';
+    document.getElementById('email__label1').style.visibility = 'visible';
+    return false;
+  }
+  
+   if((userPasswordRegx.test(userPassword))){
+    document.getElementById('userPassword').style.border = '1px solid red';
+    document.getElementById('pass__label1').style.color = 'red';
+    document.getElementById('pass__label1').innerHTML= 'Enter Your Password';
+    document.getElementById('pass__label1').style.visibility = 'visible';
+    return false;
+    
+  }
+  else{
+    document.getElementById('pass__label1').style.visibility = 'hidden';
+    document.getElementById('userPassword').style.border = '1px solid green';
+  }
+}
 //Book entry form validation
 
 function bookEntryForm() {

@@ -16,7 +16,8 @@ if(isset($_POST['submit'])){
         exit();
     }
     else{
-        mysqli_stmt_bind_param($stmt,'ssss',$fullName,$userName,$userEmail,$userPassword);
+        $hashPassword = password_hash($userPassword,PASSWORD_DEFAULT);
+        mysqli_stmt_bind_param($stmt,'ssss',$fullName,$userName,$userEmail,$hashPassword);
         mysqli_stmt_execute($stmt);
         // mysqli_stmt_store_result($stmt);
         header('Location: ../signup.php?signup=success');
