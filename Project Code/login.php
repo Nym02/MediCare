@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/login.css" />
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index1Res.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
@@ -21,8 +23,12 @@
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/popper.min.js"></script>
+    <script src="js/index.js"></script>
   </head>
   <body>
+    <header>
+      <?php include'includes/menu.inc.php'; ?>
+    </header>
     <div class="main">
       <div class="loginForm">
         <h1 class="text-center text-dark">Login</h1>
