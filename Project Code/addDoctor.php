@@ -45,6 +45,8 @@
                         <label id="userName__label1"></label>
                         <input type="text" id="uname2" name="uname2" placeholder="Enter Specialization-2">
                         <label id=""></label>
+                        <input type="text" id="uname2" name="docDegree" placeholder="Enter Degree">
+                        <label id=""></label>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
                         <label id="email__label1"></label>
