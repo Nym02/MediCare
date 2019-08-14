@@ -1,3 +1,7 @@
+<?php?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +17,7 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/index1Res.css" />
+    <link rel="stylesheet" href="css/doctorList.css">
 
     <!-- js files -->
 
@@ -34,13 +39,14 @@
                                 </div>
                                 
                        </div>
-                       <div class="col-md-6">
+                       <div class="col-md-6 mt-5">
                             <div class="doc__info">
                                     <h2>Dr. Abdur Rahim</h2>
-                                    <p>Specialty:</p>
-                                    <p>Degree:</p>
-                                    <button>Make Appointment</button>
-                                    <button>View Details</button>
+                                    <h4>Specialty: Consultant,</h4>
+                                    <p class="docDegree">Degree:</p>
+                                    <p class="docTime">Time: </p>
+                                    <button  class="btn btn-info">Make Appointment</button>
+                                    <button class="float-right btn btn-dark">View Details</button>
                                 </div>
                        </div>
                    </div>

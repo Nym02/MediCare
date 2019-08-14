@@ -154,7 +154,7 @@ function docRegValidation() {
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
   var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
-  var docDegreeRegx = /^[A-Za-z0-9_.:\-"'=|!`~@#$%^&*()]{5,}$/;
+  var docDegreeRegx = /^$/;
   var timeSlot1Regx = /^$/;
   var timeSlot2Regx = /^$/;
   var phoneNumRegx = /^[0-9]{6,}$/;
@@ -186,7 +186,7 @@ function docRegValidation() {
   }
   //doctor degree validation
 
-  if(docDegreeRegx.test(docDegree)){
+  if(!docDegreeRegx.test(docDegree)){
     document.getElementById('docDegree_label1').style.visibility = 'hidden';
     document.getElementById('docDegree').style.border = '1px solid green';
   } else {
@@ -194,7 +194,7 @@ function docRegValidation() {
     document.getElementById('docDegree_label1').style.color = 'red';
     document.getElementById('docDegree').style.border = '1px solid red';
     document.getElementById('docDegree_label1').innerHTML =
-      'Enter Doctor Degree. It can contains A-Za-z0-9_.:\-"\'=|!`~@#$%^&*()';
+      'Enter Doctor Degree.';
     return false;
   }
   //time slot 1 validation
