@@ -1,0 +1,12 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+
+.doc__img img{
+    height: 30rem;
+    width:30rem;
+}
