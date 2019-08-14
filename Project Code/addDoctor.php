@@ -47,6 +47,12 @@
                         <label id=""></label>
                         <input type="text" id="uname2" name="docDegree" placeholder="Enter Degree">
                         <label id=""></label>
+                        <input type="text" id="docTime1" name="docTime1" placeholder="Enter Time Slot-1">
+                        <label id=""></label>
+                        <input type="text" id="docTime2" name="docTime2" placeholder="Enter Time Slot-2">
+                        <label id=""></label>
+                        <input type="text" id="docTime3" name="docTime3" placeholder="Enter Time Slot-3">
+                        <label id=""></label>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
                         <label id="email__label1"></label>
@@ -55,6 +61,8 @@
 
                         <input type="text"  id="uphone" name="uphone" placeholder="Enter Phone Number"> 
                         <label id="uphone__label1"></label>
+
+
 
                         
 
