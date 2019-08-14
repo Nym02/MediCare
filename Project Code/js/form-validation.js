@@ -146,12 +146,17 @@ function docRegValidation() {
   var uFullName = document.getElementById('fullName').value;
   var uUserName = document.getElementById('uname').value;
   var userEmail = document.getElementById('uemail').value;
+  var docDegree = document.getElementById('uname3').value;
+  var timeSlot1 = document.getElementById('').value;
+  var timeSlot2 = document.getElementById('').value;
   var userPhoneNumber = document.getElementById('uphone').value;
 
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
   var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
-  
+  var docDegreeRegx = /^$/;
+  var timeSlot1Regx = /^$/;
+  var timeSlot2Regx = /^$/;
   var phoneNumRegx = /^[0-9]{6,}$/;
 
   // full name validation
@@ -179,7 +184,16 @@ function docRegValidation() {
       'Enter Doctor Specialization';
     return false;
   }
+  //doctor degree validation
 
+  if(docDegreeRegx.test(docDegree)){
+
+  } else {
+
+  }
+  //time slot 1 validation
+  //time slot 2 validation
+  //doctor description validation
   // email validation
   if (emailRegx.test(userEmail)) {
     document.getElementById('email__label1').style.visibility = 'hidden';
