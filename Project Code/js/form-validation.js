@@ -146,15 +146,15 @@ function docRegValidation() {
   var uFullName = document.getElementById('fullName').value;
   var uUserName = document.getElementById('uname').value;
   var userEmail = document.getElementById('uemail').value;
-  var docDegree = document.getElementById('uname3').value;
-  var timeSlot1 = document.getElementById('').value;
-  var timeSlot2 = document.getElementById('').value;
+  var docDegree = document.getElementById('docDegree').value;
+  var timeSlot1 = document.getElementById('docTime1').value;
+  var timeSlot2 = document.getElementById('docTime2').value;
   var userPhoneNumber = document.getElementById('uphone').value;
 
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
   var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
-  var docDegreeRegx = /^$/;
+  var docDegreeRegx = /^[A-Za-z0-9_.:\-"'=|!`~@#$%^&*()]{5,}$/;
   var timeSlot1Regx = /^$/;
   var timeSlot2Regx = /^$/;
   var phoneNumRegx = /^[0-9]{6,}$/;
@@ -187,12 +187,41 @@ function docRegValidation() {
   //doctor degree validation
 
   if(docDegreeRegx.test(docDegree)){
-
+    document.getElementById('docDegree_label1').style.visibility = 'hidden';
+    document.getElementById('docDegree').style.border = '1px solid green';
   } else {
-
+    document.getElementById('docDegree_label1').style.visibility = 'visible';
+    document.getElementById('docDegree_label1').style.color = 'red';
+    document.getElementById('docDegree').style.border = '1px solid red';
+    document.getElementById('docDegree_label1').innerHTML =
+      'Enter Doctor Degree. It can contains A-Za-z0-9_.:\-"\'=|!`~@#$%^&*()';
+    return false;
   }
   //time slot 1 validation
+  if(!timeSlot1Regx.test(timeSlot1)){
+    document.getElementById('docTime1_label1').style.visibility = 'hidden';
+    document.getElementById('docTime1').style.border = '1px solid green';
+  } else {
+    document.getElementById('docTime1_label1').style.visibility = 'visible';
+    document.getElementById('docTime1_label1').style.color = 'red';
+    document.getElementById('docTime1').style.border = '1px solid red';
+    document.getElementById('docTime1_label1').innerHTML =
+      'Enter Doctor Appointment Time Slot-1';
+    return false;
+
+  }
   //time slot 2 validation
+  if(!timeSlot2Regx.test(timeSlot2)){
+    document.getElementById('docTime2_label2').style.visibility = 'hidden';
+    document.getElementById('docTime2').style.border = '1px solid green';
+  } else {
+    document.getElementById('docTime2_label2').style.visibility = 'visible';
+    document.getElementById('docTime2_label2').style.color = 'red';
+    document.getElementById('docTime2').style.border = '1px solid red';
+    document.getElementById('docTime2_label2').innerHTML =
+      'Enter Doctor Appointment Time Slot-2';
+    return false;
+  }
   //doctor description validation
   // email validation
   if (emailRegx.test(userEmail)) {

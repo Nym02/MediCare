@@ -45,7 +45,7 @@
                         <label id="userName__label1"></label>
                         <input type="text" id="uname2" name="uname2" placeholder="Enter Specialization-2">
                         <label id=""></label>
-                        <input type="text" id="uname3" name="docDegree" placeholder="Enter Degree">
+                        <input type="text" id="docDegree" name="docDegree" placeholder="Enter Degree">
                         <label id="docDegree_label1"></label>
                         <input type="text" id="docTime1" name="docTime1" placeholder="Enter Time Slot-1">
                         <label id="docTime1_label1"></label>
