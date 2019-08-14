@@ -57,7 +57,7 @@ $result = mysqli_query($conn,$sql);
                                     <!-- <p class="docDegree"><strong>Degree:</strong> <?php echo $row['doc_Degree'] ?></p> -->
                                     <p class="docTime"><strong>Time:</strong> <?php echo $row['doc_Time1'] ?>  <?php echo $row['doc_Time2'] ?> </p>
                                     <button  class="btn btn-info">Make Appointment</button>
-                                    <button class="float-right btn btn-dark">View Details</button>
+                                    <a href="doctorDetails.php?page=doctorDetails&ID=<?php echo $row['doc_ID'] ?>" class="float-right btn btn-dark">View Details</a>
                                 </div>
                        </div>
                    </div>
