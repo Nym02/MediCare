@@ -8,7 +8,7 @@ if(isset($_POST['submit'])){
     $pass = $_POST['userPassword'];
 
     if(empty($userMail) || empty($pass)){
-        header("Location:../login.php?login=emptyField");
+        header("Location:../login.php?error=emptyField");
         exit();
     }
     else{

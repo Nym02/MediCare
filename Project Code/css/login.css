@@ -70,7 +70,7 @@ body {
 .loginErrorMsg #errorMsg{
   text-align: center;
   font-size: 14px;
-  visibility: hidden;
+  color: rgb(255, 0, 0);
 }
 .forgot__pass a {
   text-decoration: none;
@@ -92,7 +92,8 @@ body {
   text-align: center;
   /* padding: 24px; */
 }
-.loginWith button {
+.loginWith a {
+  text-decoration: none;
   padding: 5px 91px;
   background-color: #4267b2;
   border: 1px solid transparent;

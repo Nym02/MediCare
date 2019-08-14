@@ -32,23 +32,43 @@
     <div class="main">
       <div class="loginForm">
         <h1 class="text-center text-dark">Login</h1>
+
+        <?php
+          if(isset($_GET['error'])){
+            if($_GET['error']=="emptyField"){
+              echo'<div class="loginErrorMsg">
+              <p id="errorMsg">Fill in all the empty fields</p>
+  
+            </div>';
+            }
+            else if($_GET['error']=='sqlerror'){
+              echo'<div class="loginErrorMsg">
+              <p id="errorMsg">There is problem with the DB.</p>
+  
+            </div>';
+            }
+            else if($_GET['error']=='wrongpassword'){
+              echo'<div class="loginErrorMsg">
+              <p id="errorMsg">Invalid username and password.</p>
+  
+            </div>';
+            }
+          }
+        ?>
         <form action="includes/signin.inc.php" method="POST" onsubmit="return loginValidation();">
           <div class="form-input">
-            <i class="fas fa-user"></i>
+            <!-- <i class="fas fa-user"></i> -->
             <input type="text" id="userEmail" name="userEmail" placeholder="Enter Your Email/Username" />
             <label for="" id="email__label1"></label>
           </div>
           <div class="form-input">
-            <i class="fas fa-lock"></i>
+            <!-- <i class="fas fa-lock"></i> -->
             <input type="password" id="userPassword" name="userPassword" placeholder="Enter Your Password" />
             <label id="pass__label1"></label>
           </div>
-          <div class="loginErrorMsg">
-            <p id="errorMsg">Enter Valid Email and Password</p>
-
-          </div>
+          
           <div class="loginWith">
-            <button>Log in with Facebook</button>
+            <a href='#'>Log in with Facebook</a >
           </div>
           <input
              class="btn btn-outline-dark "
