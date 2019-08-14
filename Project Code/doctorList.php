@@ -46,7 +46,7 @@ $result = mysqli_query($conn,$sql);
                    
                        <div class="col-md-6">
                             <div class="doc__photo">
-                                    <img src="img/author.jpg" alt="<?php echo $row['doc_Fullname'] ?>">
+                                    <a href="doctorDetails.php?page=doctorDetails&ID=<?php echo $row['doc_ID'] ?>"><img src="img/author.jpg" alt="<?php echo $row['doc_Fullname'] ?>"></a>
                                 </div>
                                 
                        </div>
