@@ -1,4 +1,13 @@
-<?php?>
+<?php
+require 'includes/dbh.inc.php';
+
+
+$sql = "SELECT * FROM doctors";
+$result = mysqli_query($conn,$sql);
+
+
+
+?>
 
 
 
@@ -31,26 +40,29 @@
     <section class="doctors">
         <div class="container">
             <div class="row">
+            <?php while($row = mysqli_fetch_assoc($result)) { ?>
                 <div class="col-md-6">
                    <div class="row">
+                   
                        <div class="col-md-6">
                             <div class="doc__photo">
-                                    <img src="img/author.jpg" alt="Doctor Image">
+                                    <img src="img/author.jpg" alt="<?php echo $row['doc_Fullname'] ?>">
                                 </div>
                                 
                        </div>
                        <div class="col-md-6 mt-5">
                             <div class="doc__info">
-                                    <h2>Dr. Abdur Rahim</h2>
-                                    <h4>Specialty: Consultant,</h4>
-                                    <p class="docDegree">Degree:</p>
-                                    <p class="docTime">Time: </p>
+                                    <h3><?php echo $row['doc_Fullname'] ?></h3>
+                                    <h4><strong>Specialty:</strong> Consultant, <?php echo $row['doc_Specialization1'] ?> <?php echo $row['doc_Specialization2'] ?></h4>
+                                    <!-- <p class="docDegree"><strong>Degree:</strong> <?php echo $row['doc_Degree'] ?></p> -->
+                                    <p class="docTime"><strong>Time:</strong> <?php echo $row['doc_Time1'] ?>  <?php echo $row['doc_Time2'] ?> </p>
                                     <button  class="btn btn-info">Make Appointment</button>
                                     <button class="float-right btn btn-dark">View Details</button>
                                 </div>
                        </div>
                    </div>
                 </div>
+                   <?php } ?>
             </div>
         </div>
     </section>
