@@ -83,7 +83,7 @@
       
       
       <div class="form-footer">
-        <a href="registration.html">Create An Account.</a>
+        <a href="signup.php">Create An Account.</a>
       </div>
     </div>
 
