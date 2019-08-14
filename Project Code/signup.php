@@ -32,8 +32,27 @@
                 
                     <form action="includes/signup.inc.php" method="POST" onsubmit="return regValidation();" class="form-area">
                             <div class="form-header">
-                                    <h3>Registration</h3>
+                                    <h3 class="mb-6">Registration</h3>
                                 </div>
+                                <?php
+                                    if(isset($_GET['error'])){
+                                        if($_GET['error']=='sqlerror'){
+                                            echo'<div class="loginErrorMsg">
+                                            <p id="errorMsg">There is problem with the DB.</p> 
+                                            </div>';
+                                        }
+                                    }
+                                    else if(isset($_GET['signup'])){
+                                        if($_GET['signup']=='success'){
+                                            echo'<div class="loginErrorMsg">
+                                            <p id="errorMsg">User added successfully.</p> 
+                                            </div>';
+                                        }
+                                    }
+                                
+                                
+                                
+                                ?>
                         <input 
                         type="text"
                         id="fullName"
