@@ -1,0 +1,39 @@
+body{
+    padding: 0;
+    margin: 0;
+
+}
+html{
+    font-size: 10px;
+}
+.row .doc__photo{
+    
+}
+.col-md-6{
+    padding: 2rem 2rem;
+}
+.row .doc__photo img{
+    width: 20rem;
+    height: 20rem;
+}
+.doc__info{
+
+}
+.doc__info h2{
+    font-size: 3rem;
+}
+.doc__info h4{
+    font-size: 1.5rem;
+}
+.doc__info .docDegree{
+    font-size: 1.5rem;
+}
+.doc__info .docTime{
+    font-size: 1.5rem;
+}
+.doc__info .btn-info{
+    font-size: 1.3rem;
+}
+.doc__info .btn-dark{
+    font-size: 1.3rem;
+}
