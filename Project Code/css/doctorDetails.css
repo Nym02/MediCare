@@ -1,0 +1,35 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+
+.doc__img img{
+    height: 30rem;
+    width:30rem;
+}
+
+.docInfo{
+
+}
+.docInfo h1{
+    font-size: 4rem;
+    padding: 3rem 0;
+}
+.docInfo h3{
+    font-size: 3rem;
+    padding: 0 0 2rem 0;
+}
+.docInfo h4{
+    font-size: 3rem;
+    padding: 0 0 2rem 0;
+}
+.docInfo p{
+    font-size: 2rem;
+    padding: 0 0 2rem 0;
+}
+.docInfo a {
+    font-size: 1.6rem;
+}
