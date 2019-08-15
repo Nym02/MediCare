@@ -58,7 +58,7 @@ if($result = mysqli_query($conn,$sql)){
                 <div class="col-md-8">
                     <div class="docInfo">
                         <h1><?php echo $row['doc_Fullname'] ?></h1>
-                        <h3><strong>Speciality:</strong> <?php echo $row['doc_Specialization1'] ?> , <?php echo $row['doc_Specialization2'] ?></h3>
+                        <h3><strong>Speciality:</strong> Consultant, <?php echo $row['doc_Specialization1'] ?> , <?php echo $row['doc_Specialization2'] ?></h3>
                         <h4><strong>Degree:</strong> <?php echo $row['doc_Degree'] ?> </h4>
 
                         <P><strong>Description:</strong> <?php echo $row['doc_Description'] ?> </P>

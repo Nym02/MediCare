@@ -1,0 +1,44 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 10px;
+}
+.docBio{
+    background-color: aliceblue;
+    height: 40rem;
+}
+.doctorImg{
+
+}
+.doctorImg img{
+ width: 20rem;
+} 
+.doctorInfo{
+
+}
+.doctorInfo h3{
+    font-size: 2rem;
+
+}
+.doctorInfo h4{
+    font-size: 1.6rem;
+}
+.doctorInfo h5{
+    font-size: 1.5rem;
+}
+
+.appointmentForm select{
+    margin: 2rem 0;
+    font-size: 1.6rem;
+    padding: 1rem 8.5rem;
+    border: 1px solid #000;
+    border-radius: 2rem;
+}
+.appointmentForm .docTime{
+    margin-top: 1rem;
+}
+.appointmentForm .docTime option{
+    font-size: 1.2rem;
+}

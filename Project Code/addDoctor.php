@@ -32,7 +32,7 @@
                 
                     <form action="includes/addDoctor.inc.php" method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
-                                    <h3>Doctor</h3>
+                                    <h3 class="mb-5">Doctor</h3>
                                 </div>
 
                                 <?php
@@ -71,6 +71,13 @@
                         <input type="text" id="docTime2" name="docTime2" placeholder="Enter Time Slot-2">
                         <label id="docTime2_label2"></label>
                         <input type="text" id="docTime3" name="docTime3" placeholder="Enter Time Slot-3">
+                        <label id="docTime3_label3"></label>
+
+                        <input type="text" id="docDate1" name="docDate1" placeholder="Enter Date 1" required>
+                        <label id="docTime3_label3"></label>
+                        <input type="text" id="docDate2" name="docDate2" placeholder="Enter Date 2" required>
+                        <label id="docTime3_label3"></label>
+                        <input type="text" id="docDate3" name="docDate3" placeholder="Enter Date 3" required>
                         <label id="docTime3_label3"></label>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
