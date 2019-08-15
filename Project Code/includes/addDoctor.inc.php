@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     }
     else{
         
-        mysqli_stmt_bind_param($stmt,'ssssssssss',$doc_Fullname,$doc_Speacialization1,$doc_Speacialization2,$doc_Degree,$doc_TimeSlot1,$doc_TimeSlot2,$doc_TimeSlot3,$doc_Email,$doc_PhoneNumber,$doc_Description);
+        mysqli_stmt_bind_param($stmt,'sssssssssssss',$doc_Fullname,$doc_Speacialization1,$doc_Speacialization2,$doc_Degree,$doc_TimeSlot1,$doc_TimeSlot2,$doc_TimeSlot3,$doc_Date1,$doc_Date2,$doc_Date3,$doc_Email,$doc_PhoneNumber,$doc_Description);
         mysqli_stmt_execute($stmt);
         // mysqli_stmt_store_result($stmt);
         header('Location: ../addDoctor.php?doctor=addedsuccessfully');

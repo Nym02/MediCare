@@ -2,15 +2,14 @@
 require 'includes/dbh.inc.php';
 
 
-$sql1 = "SELECT * FROM doctorslot JOIN doctors WHERE doctorslot.doc_ID=".$_GET['ID'];
-// $sql2 = "SELECT * from doctors where doc_ID= ".$_GET['ID'];
 
-if($result1 = mysqli_query($conn,$sql1)){
-    $row1 = mysqli_fetch_assoc($result1);
+$sql2 = "SELECT * from doctors where doc_ID= ".$_GET['ID'];
 
 
-// if($result2 = mysqli_query($conn,$sql2)) {
-//     $row2 = mysqli_fetch_assoc($result2);
+
+
+if($result2 = mysqli_query($conn,$sql2)) {
+    $row2 = mysqli_fetch_assoc($result2);
 
 ?>
 
@@ -59,7 +58,7 @@ if($result1 = mysqli_query($conn,$sql1)){
                             </div>
                             <div class="col-md-6">
                                 <div class="doctorInfo">
-                                    <h3 class="my-3"><strong>Name:</strong> <?php echo $row1['doc_Fullname']?></h3>
+                                    <h3 class="my-3"><strong>Name:</strong> <?php echo $row2['doc_Fullname']?></h3>
                                     <h4 class="mb-3"><strong>Speciality:</strong> Consultant,  </h4>
                                     <h5 class="mb-3"><strong>Degree:</strong> MBBS, D. (Ortho), FA (Ortho), FAMA Trained in Orth...</h5>
 
@@ -89,12 +88,16 @@ if($result1 = mysqli_query($conn,$sql1)){
                         <select class="docDate" name="docDate" id="docDate">
                             <option value="#">Select Date</option>
                             
-                            <option value="1"><?php echo $row1['doc_Date1']?></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
+                            <option value="1"><?php echo $row2['doc_Date1']?></option>
+                            <option value="2"><?php echo $row2['doc_Date2']?></option>
+                            <option value="3"><?php echo $row2['doc_Date3']?></option>
                         </select>
                         <select class="docTime" name="docTime" id="docTime">
-                            <option value="">Select Time</option>
+                            <option value="#">Select Time</option>
+                            <option value="1"><?php echo $row2['doc_Time1']?></option>
+                            <option value="2"><?php echo $row2['doc_Time2']?></option>
+                            <option value="3"><?php echo $row2['doc_Time3']?></option>
+                            
                         </select>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">

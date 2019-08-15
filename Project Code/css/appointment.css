@@ -39,3 +39,6 @@ html{
 .appointmentForm .docTime{
     margin-top: 1rem;
 }
+.appointmentForm .docTime option{
+    font-size: 1.2rem;
+}
