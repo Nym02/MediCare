@@ -1,3 +1,23 @@
+<?php
+require 'includes/dbh.inc.php';
+
+
+$sql1 = "SELECT * FROM doctorslot JOIN doctors WHERE doctorslot.doc_ID=".$_GET['ID'];
+// $sql2 = "SELECT * from doctors where doc_ID= ".$_GET['ID'];
+
+if($result1 = mysqli_query($conn,$sql1)){
+    $row1 = mysqli_fetch_assoc($result1);
+
+
+// if($result2 = mysqli_query($conn,$sql2)) {
+//     $row2 = mysqli_fetch_assoc($result2);
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,17 +49,17 @@
     <section class="appointment">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 docBio">
                     <div class="doctorIntro">
                         <div class="row mt-5 pt-5">
-                            <div class="col-md-6">
+                            <div class="col-md-6 ">
                                 <div class="doctorImg">
                                     <img src="img/author.jpg" alt="">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="doctorInfo">
-                                    <h3 class="my-3"><strong>Name:</strong> </h3>
+                                    <h3 class="my-3"><strong>Name:</strong> <?php echo $row1['doc_Fullname']?></h3>
                                     <h4 class="mb-3"><strong>Speciality:</strong> Consultant,  </h4>
                                     <h5 class="mb-3"><strong>Degree:</strong> MBBS, D. (Ortho), FA (Ortho), FAMA Trained in Orth...</h5>
 
@@ -52,7 +72,7 @@
                     <div class="appointmentForm">
                         <form action="" method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
-                                    <h3>Make Appointment</h3>
+                                    <h3 class="mb-5">Make Appointment</h3>
                                 </div>
 
                                
@@ -66,8 +86,15 @@
                         <input type="text" id="uname" name="uname" placeholder="Enter Your Problem">
                         <label id="userName__label1"></label>
                         
-                        <select name="docDate" id="docDate">
-                            <option value="">Select Date</option>
+                        <select class="docDate" name="docDate" id="docDate">
+                            <option value="#">Select Date</option>
+                            
+                            <option value="1"><?php echo $row1['doc_Date1']?></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                        </select>
+                        <select class="docTime" name="docTime" id="docTime">
+                            <option value="">Select Time</option>
                         </select>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
@@ -93,8 +120,10 @@
                     </form>
                     </div>
                 </div>
+<?php }?>
             </div>
         </div>
+
     </section>
 </body>
 </html>

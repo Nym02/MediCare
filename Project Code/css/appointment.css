@@ -5,6 +5,10 @@ body{
 html{
     font-size: 10px;
 }
+.docBio{
+    background-color: aliceblue;
+    height: 40rem;
+}
 .doctorImg{
 
 }
@@ -30,5 +34,8 @@ html{
     font-size: 1.6rem;
     padding: 1rem 8.5rem;
     border: 1px solid #000;
-    border-radius: 1.6rem;
+    border-radius: 2rem;
+}
+.appointmentForm .docTime{
+    margin-top: 1rem;
 }
