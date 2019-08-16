@@ -67,7 +67,9 @@ color: crimson;
     font-size: 1.8rem;
 }
 
-
+.tableInfo{
+    font-size: 1.6rem;
+}
 
 
 
@@ -111,6 +113,9 @@ color: crimson;
         margin: 2rem 0 2rem 4rem;
         font-size: 1.6rem;
     }
+    .tableInfo{
+        font-size: 1.4rem;
+    }
 }
 
 @media (max-width:576px){
@@ -140,5 +145,8 @@ color: crimson;
         display: inline-block;
         margin: 2rem 0 2rem 1rem;
         font-size: 1.4rem;
+    }
+    .tableInfo{
+        font-size: 1.2rem;
     }
 }
