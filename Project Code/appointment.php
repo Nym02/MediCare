@@ -82,21 +82,25 @@ if($result2 = mysqli_query($conn,$sql2)) {
                         placeholder="Enter Name">
                         <label id="fullName__label1"></label>
 
-                        <input type="text" id="uname" name="uname" placeholder="Enter Your Problem">
-                        <label id="userName__label1"></label>
+                        <!-- <input type="text" id="uname" name="uname" placeholder="Enter Your Problem">
+                        <label id="userName__label1"></label> -->
                         
                         <select class="docDate" name="docDate" id="docDate">
                             <option value="#">Select Date</option>
                             
-                            <option value="1"><?php echo $row2['doc_Date1']?></option>
-                            <option value="2"><?php echo $row2['doc_Date2']?></option>
-                            <option value="3"><?php echo $row2['doc_Date3']?></option>
+                            <option value="<?php echo $row2['doc_Date1']?>"><?php echo $row2['doc_Date1']?></option>
+
+                            <option value="<?php echo $row2['doc_Date2']?>"><?php echo $row2['doc_Date2']?></option>
+
+                            <option value="<?php echo $row2['doc_Date3']?>"><?php echo $row2['doc_Date3']?></option>
                         </select>
                         <select class="docTime" name="docTime" id="docTime">
-                            <option value="#">Select Time</option>
-                            <option value="1"><?php echo $row2['doc_Time1']?></option>
-                            <option value="2"><?php echo $row2['doc_Time2']?></option>
-                            <option value="3"><?php echo $row2['doc_Time3']?></option>
+                            <option >Select Time</option>
+                            <option value="<?php echo $row2['doc_Time1']?>"><?php echo $row2['doc_Time1']?></option>
+
+                            <option value="<?php echo $row2['doc_Time2']?>"><?php echo $row2['doc_Time2']?></option>
+
+                            <option value="<?php echo $row2['doc_Time3']?>"><?php echo $row2['doc_Time3']?></option>
                             
                         </select>
 

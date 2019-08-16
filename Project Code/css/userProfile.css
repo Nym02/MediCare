@@ -1,0 +1,152 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F0F0F0;
+}
+html{
+    font-size: 10px;
+}
+.users{
+
+}
+.users .userImg{
+    
+}
+.userImg img{
+    width: 22rem;
+    height: 22rem;
+}
+.userImg h4{
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    color: crimson;
+}
+.userImg p{
+    font-size: 1.4rem;
+}
+.userProfileInfoMargin1{
+    padding-left: 10rem;
+}
+.userProfileInfoMargin2{
+    padding-left: 0rem;
+}
+
+.users .userProfile{
+
+}
+.userProfile .userProfileInfo{
+
+}
+.userProfile .aboutHeader{
+    font-size: 3rem;
+
+padding: 4rem 0 2rem 5rem;
+
+color: crimson;
+}
+.userProfileInfo .userFullName{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+.userProfileInfo .userName{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.userProfileInfo .userEmail{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+.userProfileInfo .userPhone{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.edit .editButton{
+    display: inline-block;
+    margin: 2rem 0 2rem 4rem;
+    font-size: 1.8rem;
+}
+
+.tableInfo{
+    font-size: 1.6rem;
+}
+
+
+
+
+
+
+
+/* Responsive code */
+
+@media (max-width: 768px){
+    .userProfile .aboutHeader{
+        font-size: 3rem;
+        padding: 4rem 0 2rem 1rem;
+        color: crimson;
+    }
+    .userProfileInfoMargin1{
+        padding-left: 6rem;
+    }
+    .userProfileInfoMargin2{
+        padding-left: 0rem;
+    }
+    .userProfileInfo .userFullName{
+        font-size: 1.5rem;
+        margin: 2rem 0;
+    }
+    .userProfileInfo .userName{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .userProfileInfo .userEmail{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        display: block;
+    }
+    .userProfileInfo .userPhone{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .edit .editButton{
+        display: inline-block;
+        margin: 2rem 0 2rem 4rem;
+        font-size: 1.6rem;
+    }
+    .tableInfo{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:576px){
+    .userProfileInfoMargin1{
+        padding-left: 3rem;
+    }
+    .userProfileInfoMargin2{
+        padding-left: 0rem;
+    }
+    .userProfileInfo .userFullName{
+        font-size: 1.1rem;
+        margin: 2rem 0;
+    }
+    .userProfileInfo .userName{
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .userProfileInfo .userEmail{
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .userProfileInfo .userPhone{
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .edit .editButton{
+        display: inline-block;
+        margin: 2rem 0 2rem 1rem;
+        font-size: 1.4rem;
+    }
+    .tableInfo{
+        font-size: 1.2rem;
+    }
+}
