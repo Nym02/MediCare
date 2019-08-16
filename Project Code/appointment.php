@@ -1,5 +1,15 @@
 <?php
+session_start();
+
 require 'includes/dbh.inc.php';
+if(isset($_SESSION['username'])==true){
+    $userID = $_SESSION['username'];
+    echo $userID;
+    // $query = "SELECT * from users where userFullname = '$userID'";
+    // $result = mysqli_query($conn,$query);
+    // $row = mysqli_fetch_assoc($result);
+
+    // $id = $row['userID'];
 
 
 
@@ -69,7 +79,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
                 </div>
                 <div class="col-md-6">
                     <div class="appointmentForm">
-                        <form action="" method="POST" onsubmit="return docRegValidation();" class="form-area">
+                        <form action="includes/appointment.inc.php" method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
                                     <h3 class="mb-5">Make Appointment</h3>
                                 </div>
@@ -130,7 +140,8 @@ if($result2 = mysqli_query($conn,$sql2)) {
 <?php }?>
             </div>
         </div>
-
+        <?php }?>
     </section>
 </body>
+
 </html>
