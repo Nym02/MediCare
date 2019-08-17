@@ -37,6 +37,12 @@ $result = mysqli_query($conn,$sql);
     <script src="js/index.js"></script>
 </head>
 <body>
+    <header>
+
+    <?php
+        include 'includes/menu.inc.php';
+    ?>
+    </header>
     <section class="doctors">
         <div class="container">
             <div class="row">
