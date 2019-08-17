@@ -1,7 +1,7 @@
 <?php 
 
 if(isset($_POST['submit'])){
-    require"dbh.inc.php";
+    require "dbh.inc.php";
 
     $fullName = $_POST['fullName'];
     $userName = $_POST['uname'];

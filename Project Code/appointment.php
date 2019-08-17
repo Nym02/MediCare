@@ -2,19 +2,61 @@
 session_start();
 
 require 'includes/dbh.inc.php';
-if(isset($_SESSION['username'])==true){
-    $userID = $_SESSION['username'];
-    echo $userID;
-    // $query = "SELECT * from users where userFullname = '$userID'";
-    // $result = mysqli_query($conn,$query);
-    // $row = mysqli_fetch_assoc($result);
 
-    // $id = $row['userID'];
+// if(isset($_SESSION['username'])==true){
+//     $userID = $_SESSION['username'];
+    
+//     $query = "SELECT * from users WHERE username ='$userID' ";
+//     $result = mysqli_query($conn,$query);
+//     $row = mysqli_fetch_array($result);
+    
+
+//     $id = $row['userID'];
+    
 
 
 
 $sql2 = "SELECT * from doctors where doc_ID= ".$_GET['ID'];
 
+// $docID = $_GET['ID'];
+// // echo $docID;
+
+
+// if(isset($_POST['submit'])){
+   
+
+//     $fullName = $_POST['fullName'];
+//     $docDate = $_POST['docDate'];
+//     $docTime = $_POST['docTime'];
+//     $userEmail = $_POST['uemail'];
+//     $userPhone = $_POST['uphone'];
+//     $userDescription = $_['docDescription'];
+    
+
+
+//     $sql = "INSERT INTO appointment(user_fullname, 	docDate, 	docTime, 	userEmail, 	userPhone, 	userDescription,userID,doc_ID)  VALUES (?,?,?,?,?,?,?,?)";
+//     $stmt = mysqli_stmt_init($conn);
+//     if(!mysqli_stmt_prepare($stmt,$sql)){
+//         header('Location: doctorList.php?error=sqlerror');
+//         exit();
+//     }
+//     else{
+        
+//         mysqli_stmt_bind_param($stmt,'ssssssii',$fullName,$docDate,$docTime,$userEmail,$userPhone,$userDescription,$id,$docID);
+//         mysqli_stmt_execute($stmt);
+//         // mysqli_stmt_store_result($stmt);
+//         header('Location: appointment.php?appointment=success');
+//         exit();
+//     }
+
+//     mysqli_stmt_close($stmt);
+//     mysqli_close($conn);
+
+// }
+// else{
+//     header('Location: doctorList.php?error=goingSomewhereElse');
+//         exit();
+// }
 
 
 
@@ -69,7 +111,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
                             <div class="col-md-6">
                                 <div class="doctorInfo">
                                     <h3 class="my-3"><strong>Name:</strong> <?php echo $row2['doc_Fullname']?></h3>
-                                    <h4 class="mb-3"><strong>Speciality:</strong> Consultant,  </h4>
+                                    <h4 class="mb-3"><strong>Speciality:</strong> Consultant, <?php echo $row2['doc_Specialization1'] ?>  </h4>
                                     <h5 class="mb-3"><strong>Degree:</strong> MBBS, D. (Ortho), FA (Ortho), FAMA Trained in Orth...</h5>
 
                                 </div>
@@ -79,7 +121,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
                 </div>
                 <div class="col-md-6">
                     <div class="appointmentForm">
-                        <form action="includes/appointment.inc.php" method="POST" onsubmit="return docRegValidation();" class="form-area">
+                        <form action="includes/appointment.inc.php"  method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
                                     <h3 class="mb-5">Make Appointment</h3>
                                 </div>
@@ -92,11 +134,10 @@ if($result2 = mysqli_query($conn,$sql2)) {
                         placeholder="Enter Name">
                         <label id="fullName__label1"></label>
 
-                        <!-- <input type="text" id="uname" name="uname" placeholder="Enter Your Problem">
-                        <label id="userName__label1"></label> -->
+                        
                         
                         <select class="docDate" name="docDate" id="docDate">
-                            <option value="#">Select Date</option>
+                            <option >Select Date</option>
                             
                             <option value="<?php echo $row2['doc_Date1']?>"><?php echo $row2['doc_Date1']?></option>
 
@@ -104,6 +145,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
 
                             <option value="<?php echo $row2['doc_Date3']?>"><?php echo $row2['doc_Date3']?></option>
                         </select>
+
                         <select class="docTime" name="docTime" id="docTime">
                             <option >Select Time</option>
                             <option value="<?php echo $row2['doc_Time1']?>"><?php echo $row2['doc_Time1']?></option>
@@ -140,7 +182,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
 <?php }?>
             </div>
         </div>
-        <?php }?>
+        
     </section>
 </body>
 
