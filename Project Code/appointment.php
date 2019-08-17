@@ -1,62 +1,51 @@
 <?php
 session_start();
-
-require 'includes/dbh.inc.php';
-
-// if(isset($_SESSION['username'])==true){
-//     $userID = $_SESSION['username'];
+require "includes/dbh.inc.php";
+if(isset($_SESSION['username'])==true){
+        $userID = $_SESSION['username'];
     
-//     $query = "SELECT * from users WHERE username ='$userID' ";
-//     $result = mysqli_query($conn,$query);
-//     $row = mysqli_fetch_array($result);
+    $query = "SELECT * from users WHERE username ='$userID'; ";
+    $result3 = mysqli_query($conn,$query);
+    $row = mysqli_fetch_array($result3);
     
 
-//     $id = $row['userID'];
+    $id = $row['userID'];
+    $docID = $_GET['ID'];
     
+
+    
+
+
+if(isset($_POST['submit'])){
+    
+
+
+    $fullName = mysqli_real_escape_string($conn,$_POST['fullName']);
+    $docDate = mysqli_real_escape_string($conn,$_POST['docDate']);
+    $docTime = mysqli_real_escape_string($conn,$_POST['docTime']);
+    $uEmail = mysqli_real_escape_string($conn,$_POST['uemail']);
+    $uPhone = mysqli_real_escape_string($conn,$_POST['uphone']);
+    $uDesc = mysqli_real_escape_string($conn,$_POST['userDescription']);
+
+    $sql = "INSERT INTO appointment (user_fullname,docDate,docTime,userEmail,userPhone,userDescription,userID,doc_ID) VALUES ('$fullName','$docDate','$docTime','$uEmail','$uPhone','$uDesc','$id','$docID');";
+    $result=mysqli_query($conn,$sql);
+    if($result){
+        header("Location: doctorList.php?add=success");
+        exit();
+    }
+    else{
+        header("Location: doctorList.php?add=NOTsuccess");
+        exit();
+    }
+
+}
+}
 
 
 
 $sql2 = "SELECT * from doctors where doc_ID= ".$_GET['ID'];
 
-// $docID = $_GET['ID'];
-// // echo $docID;
 
-
-// if(isset($_POST['submit'])){
-   
-
-//     $fullName = $_POST['fullName'];
-//     $docDate = $_POST['docDate'];
-//     $docTime = $_POST['docTime'];
-//     $userEmail = $_POST['uemail'];
-//     $userPhone = $_POST['uphone'];
-//     $userDescription = $_['docDescription'];
-    
-
-
-//     $sql = "INSERT INTO appointment(user_fullname, 	docDate, 	docTime, 	userEmail, 	userPhone, 	userDescription,userID,doc_ID)  VALUES (?,?,?,?,?,?,?,?)";
-//     $stmt = mysqli_stmt_init($conn);
-//     if(!mysqli_stmt_prepare($stmt,$sql)){
-//         header('Location: doctorList.php?error=sqlerror');
-//         exit();
-//     }
-//     else{
-        
-//         mysqli_stmt_bind_param($stmt,'ssssssii',$fullName,$docDate,$docTime,$userEmail,$userPhone,$userDescription,$id,$docID);
-//         mysqli_stmt_execute($stmt);
-//         // mysqli_stmt_store_result($stmt);
-//         header('Location: appointment.php?appointment=success');
-//         exit();
-//     }
-
-//     mysqli_stmt_close($stmt);
-//     mysqli_close($conn);
-
-// }
-// else{
-//     header('Location: doctorList.php?error=goingSomewhereElse');
-//         exit();
-// }
 
 
 
@@ -121,7 +110,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
                 </div>
                 <div class="col-md-6">
                     <div class="appointmentForm">
-                        <form action="includes/appointment.inc.php"  method="POST" onsubmit="return docRegValidation();" class="form-area">
+                        <form action=""  method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
                                     <h3 class="mb-5">Make Appointment</h3>
                                 </div>
@@ -164,7 +153,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
                         <input type="text"  id="uphone" name="uphone" placeholder="Enter Phone Number"> 
                         <label id="uphone__label1"></label>
 
-                        <textarea class="my-5" name="docDescription" id="docDescription" cols="45" rows="5" placeholder="Briefly describe your problem."></textarea>
+                        <textarea class="my-5" name="userDescription" id="userDescription" cols="45" rows="5" placeholder="Briefly describe your problem."></textarea>
 
 
 
@@ -182,7 +171,7 @@ if($result2 = mysqli_query($conn,$sql2)) {
 <?php }?>
             </div>
         </div>
-        
+       
     </section>
 </body>
 
