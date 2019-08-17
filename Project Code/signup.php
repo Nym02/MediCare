@@ -21,6 +21,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/index.js"></script>
+    <!-- <script src="js/checkUsername.js"></script> -->
 </head>
 <body>
     <header class="header-area">
@@ -39,6 +40,10 @@
                                         if($_GET['error']=='sqlerror'){
                                             echo'<div class="loginErrorMsg">
                                             <p id="errorMsg">There is problem with the DB.</p> 
+                                            </div>';
+                                        } else if($_GET['error']=='usernameExist'){
+                                            echo'<div class="loginErrorMsg">
+                                            <p id="errorMsg">Username Taken. Try New One.</p> 
                                             </div>';
                                         }
                                     }
@@ -62,6 +67,7 @@
 
                         <input type="text" id="uname" name="uname" placeholder="Enter Username">
                         <label id="userName__label1"></label>
+                        <span id="available"></span>
 
                         <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
                         <label id="email__label1"></label>

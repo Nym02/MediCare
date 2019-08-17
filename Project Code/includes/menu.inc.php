@@ -5,8 +5,8 @@
             <a href="#"><i class="fas fa-bars"></i></a>
           </div>
           <ul class="text-center">
-            <li><a href="#">home</a></li>
-            <li><a href="#">doctors</a></li>
+            <li><a href="index.php">home</a></li>
+            <li><a href="doctorList.php">doctors</a></li>
             <li>
               <a href="javascript:void(0)">make appointment</a>
               <!-- <ul>

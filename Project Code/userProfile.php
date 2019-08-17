@@ -1,3 +1,40 @@
+<?php
+session_start();
+require 'includes/dbh.inc.php';
+
+if(isset($_SESSION['username'])==true){
+    $userID = $_SESSION['username'];
+
+$query = "SELECT * from users WHERE username ='$userID'; ";
+$result3 = mysqli_query($conn,$query);
+$row = mysqli_fetch_array($result3);
+$id = $row['userID'];
+
+
+
+
+
+//fetching appointment info from appointment table
+
+$query2 = "SELECT * from appointment where userID=$id";
+$result4 = mysqli_query($conn,$query2);
+
+
+//fetching user info from the users table
+$userQuery = "SELECT * FROM users where userID=$id";
+if($userResult = mysqli_query($conn,$userQuery)){
+    $userRow = mysqli_fetch_assoc($userResult);
+
+
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,9 +87,7 @@
                                                 <p class="userName">User Name:</p>
                                                 <p class="userEmail">Email </p>
                                                 <p class="userPhone">Phone: </p>
-                                                <p class="userPhone">
-                                                    Birthday:
-                                                </p>
+                                                
                                                 <p class="userPhone">
                                                     Country:
                                                 </p>
@@ -60,14 +95,12 @@
                                        </div>
                                        <div class="col-md-6 col-sm-6 col-6 userProfileInfoMargin2">
                                            <div class="userProfileTagValue">
-                                                <p class="userFullName">Nayeem M. Muzahid 
+                                                <p class="userFullName"><?php echo $userRow['userFullName'] ?>
                                                     </p>
-                                            <p class="userName">Nayeem_Muzahid</p>
-                                            <p class="userEmail">Nayeemm.Muzahid@gmail.com </p>
+                                            <p class="userName"><?php echo $userRow['userName'] ?></p>
+                                            <p class="userEmail"><?php echo $userRow['userEmail'] ?></p>
                                             <p class="userPhone">+8801949509823 </p>
-                                            <p class="userPhone">
-                                                    Jan 22, 1984
-                                            </p>
+                                            
                                             <p class="userPhone">
                                                     Bangladesh
                                                 </p>
@@ -78,39 +111,37 @@
                                         <a href="#" class="btn btn-danger editButton">Edit</a>
                                    </div>
                                     <hr>
-
+<?php } ?>
                                 </div>
                                 <div class="col-md-12">
-                                        <table class="table tableInfo table-dark">
-                                                <thead>
-                                                  <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">First</th>
-                                                    <th scope="col">Last</th>
-                                                    <th scope="col">Handle</th>
-                                                  </tr>
-                                                </thead>
-                                                <tbody>
-                                                  <tr>
+                                    <h1>Appointments: </h1>
+                                    <table class="table tableInfo table-dark">
+                                            <thead>
+                                                <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Doctor Name</th>
+                                                <th scope="col">Date</th>
+                                                <th scope="col">Time</th>
+                                                <th scope="col">Phone</th>
+                                                <th scope="col">Delete</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php while($rowCount = mysqli_fetch_array($result4)) { ?>
+                                                <tr>
                                                     <th scope="row">1</th>
-                                                    <td>Mark</td>
-                                                    <td>Otto</td>
-                                                    <td>@mdo</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">2</th>
-                                                    <td>Jacob</td>
-                                                    <td>Thornton</td>
-                                                    <td>@fat</td>
-                                                  </tr>
-                                                  <tr>
-                                                    <th scope="row">3</th>
-                                                    <td>Larry</td>
-                                                    <td>the Bird</td>
-                                                    <td>@twitter</td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
+                                                    <td><?php echo $rowCount['user_fullname'] ?></td>
+                                                    <td><?php echo $rowCount['doc_Name'] ?></td>
+                                                    <td><?php echo $rowCount['docDate'] ?></td>
+                                                    <td><?php echo $rowCount['docTime'] ?></td>
+                                                    <td><?php echo $rowCount['userPhone'] ?></td>
+                                                    <td><a href="#" class="btn btn-danger">X</a></td>
+                                                </tr>
+                                                <?php } ?>
+                                                
+                                            </tbody>
+                                            </table>
                                 </div>
                             </div>
                             
@@ -119,6 +150,7 @@
                 </div>
             </div>
         </div>
+<?php } ?>
     </section>
 </body>
 </html>

@@ -21,13 +21,14 @@ if(isset($_POST['submit'])){
 
 
     $fullName = mysqli_real_escape_string($conn,$_POST['fullName']);
+    $docName = mysqli_real_escape_string($conn,$_POST['docName']);
     $docDate = mysqli_real_escape_string($conn,$_POST['docDate']);
     $docTime = mysqli_real_escape_string($conn,$_POST['docTime']);
     $uEmail = mysqli_real_escape_string($conn,$_POST['uemail']);
     $uPhone = mysqli_real_escape_string($conn,$_POST['uphone']);
     $uDesc = mysqli_real_escape_string($conn,$_POST['userDescription']);
 
-    $sql = "INSERT INTO appointment (user_fullname,docDate,docTime,userEmail,userPhone,userDescription,userID,doc_ID) VALUES ('$fullName','$docDate','$docTime','$uEmail','$uPhone','$uDesc','$id','$docID');";
+    $sql = "INSERT INTO appointment (user_fullname,doc_Name,docDate,docTime,userEmail,userPhone,userDescription,userID,doc_ID) VALUES ('$fullName','$docName','$docDate','$docTime','$uEmail','$uPhone','$uDesc','$id','$docID');";
     $result=mysqli_query($conn,$sql);
     if($result){
         header("Location: doctorList.php?add=success");
@@ -122,6 +123,14 @@ if($result2 = mysqli_query($conn,$sql2)) {
                         name="fullName" 
                         placeholder="Enter Name">
                         <label id="fullName__label1"></label>
+
+                        <input 
+                        type="text"
+                        id="docName"
+                        name="docName" 
+                        placeholder="Enter Doctor Name"
+                        value="<?php echo $row2['doc_Fullname']?>">
+                        <label id="docName__label1"></label>
 
                         
                         
