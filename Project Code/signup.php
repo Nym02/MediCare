@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link rel="stylesheet" href="css/signup.css">
-   
+
 
     <!-- js files -->
 
@@ -23,6 +24,8 @@
     <script src="js/index.js"></script>
     <!-- <script src="js/checkUsername.js"></script> -->
 </head>
+
+
 <body>
     <header class="header-area">
 
@@ -30,66 +33,61 @@
 
     <section class="form">
         <div class="form-body">
-                
-                    <form action="includes/signup.inc.php" method="POST" onsubmit="return regValidation();" class="form-area">
-                            <div class="form-header">
-                                    <h3 class="mb-6">Registration</h3>
-                                </div>
-                                <?php
-                                    if(isset($_GET['error'])){
-                                        if($_GET['error']=='sqlerror'){
-                                            echo'<div class="loginErrorMsg">
+
+            <form action="signup.inc.php" method="POST" onsubmit="return regValidation();" class="form-area">
+                <div class="form-header">
+                    <h3 class="mb-6">Registration</h3>
+                </div>
+                <?php
+                if (isset($_GET['error'])) {
+                    if ($_GET['error'] == 'sqlerror') {
+                        echo '<div class="loginErrorMsg">
                                             <p id="errorMsg">There is problem with the DB.</p> 
                                             </div>';
-                                        } else if($_GET['error']=='usernameExist'){
-                                            echo'<div class="loginErrorMsg">
+                    } else if ($_GET['error'] == 'usernameExist') {
+                        echo '<div class="loginErrorMsg">
                                             <p id="errorMsg">Username Taken. Try New One.</p> 
                                             </div>';
-                                        }
-                                    }
-                                    else if(isset($_GET['signup'])){
-                                        if($_GET['signup']=='success'){
-                                            echo'<div class="loginErrorMsg">
+                    }
+                } else if (isset($_GET['signup'])) {
+                    if ($_GET['signup'] == 'success') {
+                        echo '<div class="loginErrorMsg">
                                             <p id="errorMsg">User added successfully.</p> 
                                             </div>';
-                                        }
-                                    }
-                                
-                                
-                                
-                                ?>
-                        <input 
-                        type="text"
-                        id="fullName"
-                        name="fullName" 
-                        placeholder="Enter Name">
-                        <label id="fullName__label1"></label>
+                    }
+                }
 
-                        <input type="text" id="uname" name="uname" placeholder="Enter Username">
-                        <label id="userName__label1"></label>
-                        <span id="available"></span>
 
-                        <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
-                        <label id="email__label1"></label>
 
-                        <input type="password" name="upass" id="upass" placeholder="Enter Password">
-                        <label id="upass__label1"></label>
+                ?>
+                <div class="form-inputs">
 
-                        <!-- <input type="text"  id="uphone" placeholder="Enter Phone Number"> 
-                        <label id="uphone__label1"></label> -->
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter Name">
+                    <label id="fullName__label1"></label>
 
-                        
+                    <input type="text" id="uname" name="uname" placeholder="Enter Username">
+                    <label id="userName__label1"></label>
+                    <span id="available"></span>
 
-                        <input
-                        class="btn btn-outline-dark "
-                        type="submit"
-                        name="submit"
-                        value="Register"
-        />
-                    </form>
-                    <div class="form-footer">
-                            <a href="login.php">Login With An Existing Account.</a>
-                          </div>
+                    <input type="email" id="uemail" name="uemail" placeholder="Enter Email">
+                    <label id="email__label1"></label>
+
+                    <input type="password" name="upass" id="upass" placeholder="Enter Password">
+                    <label id="upass__label1"></label>
+
+                    <input type="text" id="uphone" name="uphone" placeholder="Enter Phone Number">
+                    <label id="uphone__label1"></label>
+
+                    <input type="file" id="imgUpload" name="imgUpload" class="imgUpload pb-5">
+
+
+
+                    <input class="btn btn-outline-dark " type="submit" name="submit" value="Register" />
+                </div>
+            </form>
+            <div class="form-footer">
+                <a href="login.php">Login With An Existing Account.</a>
+            </div>
         </div>
     </section>
 
@@ -102,4 +100,5 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/form-validation.js"></script>
 </body>
+
 </html>
