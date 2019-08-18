@@ -1,100 +1,93 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/doc.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-    
-    
-  }
-  html {
-    font-size: 62.5%;
-  }
-  .form{
-      
-    
-  }
-  .form-body{
-    background: #fff;
-      margin: 40px auto 20px;
-      border-radius: 7px;
-      width: 450px;
+  margin: 0;
+  padding: 0;
+  background-image: url('../img/doc.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+html {
+  font-size: 62.5%;
+}
+.form {
+}
+.form-body {
+  background: #fff;
+  margin: 40px auto 20px;
+  border-radius: 7px;
+  width: 450px;
+}
+.form-area {
+  text-align: center;
+  padding: 3rem 6rem;
+}
+.form-area .form-inputs .imgUpload {
+  border: none;
+}
+.form-area input {
+  display: block;
+  padding: 0.8rem 5.5rem;
+  margin: auto;
 
-  }
-  .form-area{
-      text-align: center;
-      padding: 3rem 6rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 17px;
+}
 
+.form-area label {
+  font-size: 1.4rem;
+}
+.form-area label:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.form-area h3 {
+  font-size: 4rem;
+  margin-bottom: 7rem;
+
+  border-bottom: 2px solid #000;
+
+  display: inline-block;
+
+  padding-bottom: 1rem;
+}
+.form-footer {
+  text-align: center;
+  margin-top: 4rem;
+  background-color: #212121;
+  padding: 1.7rem 0;
+}
+.form-footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.loginErrorMsg #errorMsg {
+  text-align: center;
+  font-size: 14px;
+  color: green;
+}
+
+/* Responsive code */
+
+@media (max-width: 768px) {
+}
+@media (max-width: 556px) {
+  .form-area {
+    text-align: center;
+    padding: 2rem 4rem;
   }
-  .form-area input{
+  .form-area input {
     display: block;
-    padding: 0.8rem 5.5rem;
+    padding: 0.5rem 4.5rem;
     margin: auto;
-        
-    font-size: 1.5rem;
+
+    font-size: 1.2rem;
     text-align: center;
     border: 1px solid #000;
-    border-radius: 17px;
+    border-radius: 14px;
   }
-  .form-area label{
-      font-size: 1.4rem;
+  .form-area h3 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
-  .form-area label:not(:last-child){
-      margin-bottom: 1.5rem;
-  }
-  .form-area h3{
-      font-size: 4rem;
-      margin-bottom: 7rem;
-
-      border-bottom: 2px solid #000;
-
-      display: inline-block;
-
-      padding-bottom: 1rem;
-  }
-  .form-footer {
-    text-align: center;
-    margin-top: 4rem;
-    background-color: #212121;
-    padding: 1.7rem 0;
-  }
-  .form-footer a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-  }
-  .loginErrorMsg #errorMsg{
-    text-align: center;
-    font-size: 14px;
-    color: green;
-  }
-
-
-
-  /* Responsive code */
-
-  @media(max-width: 768px){
-
-  }
-  @media(max-width: 556px){
-    .form-area{
-        text-align: center;
-        padding: 2rem 4rem;
-  
-    }
-    .form-area input{
-      display: block;
-      padding: 0.5rem 4.5rem;
-      margin: auto;
-          
-      font-size: 1.2rem;
-      text-align: center;
-      border: 1px solid #000;
-      border-radius: 14px;
-    }
-    .form-area h3{
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
-    }
-  }
+}

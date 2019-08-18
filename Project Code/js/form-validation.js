@@ -3,13 +3,13 @@ function regValidation() {
   var uUserName = document.getElementById('uname').value;
   var userEmail = document.getElementById('uemail').value;
   var userPassword = document.getElementById('upass').value;
-  // var userPhoneNumber = document.getElementById('uphone').value;
+  var userPhoneNumber = document.getElementById('uphone').value;
 
   var fullNameRegx = /^[a-zA-Z \.]{3,}$/;
   var userNameRegx = /^[A-Za-z0-9_]{4,}$/;
   var emailRegx = /^([a-zA-Z\.\-_0-9]+)@([a-zA-Z]+).([a-zA-Z\.]{2,})$/;
   var passwordRegx = /^[0-9a-zA-Z\.\-_$%&*#@!]{8,32}$/;
-  // var phoneNumRegx = /^[0-9]{6,}$/;
+  var phoneNumRegx = /^[0-9]{6,}$/;
 
   // full name validation
 
@@ -67,53 +67,49 @@ function regValidation() {
     return false;
   }
   //Phone number Validation
-  // if (phoneNumRegx.test(userPhoneNumber)) {
-  //   document.getElementById('uphone__label1').style.visibility = 'hidden';
-  //   document.getElementById('uphone__label1').style.color = 'green';
-  //   document.getElementById('uphone').style.border = '1px solid green';
-  //   document.getElementById('uphone__label1').innerHTML = 'valid';
+  if (phoneNumRegx.test(userPhoneNumber)) {
+    document.getElementById('uphone__label1').style.visibility = 'hidden';
+    document.getElementById('uphone__label1').style.color = 'green';
+    document.getElementById('uphone').style.border = '1px solid green';
+    document.getElementById('uphone__label1').innerHTML = 'valid';
 
-  //   console.log('was submitted');
-  // } else {
-  //   document.getElementById('uphone__label1').style.visibility = 'visible';
-  //   document.getElementById('uphone__label1').style.color = 'red';
-  //   document.getElementById('uphone').style.border = '1px solid red';
-  //   document.getElementById('uphone__label1').innerHTML =
-  //     'Enter a valid phone number. Phone number can contain only NUMBERS  (0-9)';
-  //   return false;
-  // }
+    console.log('was submitted');
+  } else {
+    document.getElementById('uphone__label1').style.visibility = 'visible';
+    document.getElementById('uphone__label1').style.color = 'red';
+    document.getElementById('uphone').style.border = '1px solid red';
+    document.getElementById('uphone__label1').innerHTML =
+      'Enter a valid phone number. Phone number can contain only NUMBERS  (0-9)';
+    return false;
+  }
 }
 //Login form validation
-function loginValidation(){
+function loginValidation() {
   var userEmail = document.getElementById('userEmail').value;
   var userPassword = document.getElementById('userPassword').value;
 
   var userEmailRegx = /^$/;
   var userPasswordRegx = /^$/;
 
-  if((!userEmailRegx.test(userEmail))){
+  if (!userEmailRegx.test(userEmail)) {
     document.getElementById('email__label1').style.visibility = 'hidden';
     document.getElementById('userEmail').style.border = '1px solid green';
-  }
-  else{
-    
-
+  } else {
     document.getElementById('userEmail').style.border = '1px solid red';
     document.getElementById('email__label1').style.color = 'red';
-    document.getElementById('email__label1').innerHTML= 'Enter Your Email/Username';
+    document.getElementById('email__label1').innerHTML =
+      'Enter Your Email/Username';
     document.getElementById('email__label1').style.visibility = 'visible';
     return false;
   }
-  
-   if((userPasswordRegx.test(userPassword))){
+
+  if (userPasswordRegx.test(userPassword)) {
     document.getElementById('userPassword').style.border = '1px solid red';
     document.getElementById('pass__label1').style.color = 'red';
-    document.getElementById('pass__label1').innerHTML= 'Enter Your Password';
+    document.getElementById('pass__label1').innerHTML = 'Enter Your Password';
     document.getElementById('pass__label1').style.visibility = 'visible';
     return false;
-    
-  }
-  else{
+  } else {
     document.getElementById('pass__label1').style.visibility = 'hidden';
     document.getElementById('userPassword').style.border = '1px solid green';
   }
@@ -186,7 +182,7 @@ function docRegValidation() {
   }
   //doctor degree validation
 
-  if(!docDegreeRegx.test(docDegree)){
+  if (!docDegreeRegx.test(docDegree)) {
     document.getElementById('docDegree_label1').style.visibility = 'hidden';
     document.getElementById('docDegree').style.border = '1px solid green';
   } else {
@@ -198,7 +194,7 @@ function docRegValidation() {
     return false;
   }
   //time slot 1 validation
-  if(!timeSlot1Regx.test(timeSlot1)){
+  if (!timeSlot1Regx.test(timeSlot1)) {
     document.getElementById('docTime1_label1').style.visibility = 'hidden';
     document.getElementById('docTime1').style.border = '1px solid green';
   } else {
@@ -208,10 +204,9 @@ function docRegValidation() {
     document.getElementById('docTime1_label1').innerHTML =
       'Enter Doctor Appointment Time Slot-1';
     return false;
-
   }
   //time slot 2 validation
-  if(!timeSlot2Regx.test(timeSlot2)){
+  if (!timeSlot2Regx.test(timeSlot2)) {
     document.getElementById('docTime2_label2').style.visibility = 'hidden';
     document.getElementById('docTime2').style.border = '1px solid green';
   } else {
@@ -239,7 +234,7 @@ function docRegValidation() {
       'Enter a valid email address. e.g. "something@example.com"';
     return false;
   }
-  
+
   //Phone number Validation
   if (phoneNumRegx.test(userPhoneNumber)) {
     document.getElementById('uphone__label1').style.visibility = 'hidden';
