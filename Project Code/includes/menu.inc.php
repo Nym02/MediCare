@@ -27,7 +27,7 @@
                 <li><a href="#">sub menu</a></li>
               </ul> -->
             </li>
-            <li><a href="#">admin</a></li>
+            <li><a href="Alogin.php">admin</a></li>
             <li><a href="donor.php">Donor</a></li>
             <li><a href="findAmbulance.php">Ambulance</a></li>
           </ul>
