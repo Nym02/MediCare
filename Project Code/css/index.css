@@ -86,14 +86,14 @@ body {
   text-transform: capitalize;
   font-size: 18px;
 }
-.main-menu ul li:hover a {
+.main-menu ul li a:hover {
   background-color: #ffffff;
   color: #000;
 }
 
-/* resposive menu  bar*/
+/* resposive menu bar  */
 .main-menu .res-menu {
-  background-color: #4b4b4b;
+  background-color: #111010;
   padding: 7px 0;
   overflow: hidden;
   display: none;
@@ -113,8 +113,7 @@ body {
   margin-right: 40px;
 }
 
-/* creating sub menu */
-
+/* creating sub menu  */
 .main-menu ul ul {
   padding: 0;
   margin: 0;
