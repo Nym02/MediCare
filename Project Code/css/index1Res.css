@@ -1,7 +1,7 @@
 /* ------------media query-------------- */
 
 @media (max-width: 768px) {
-  /* .main-menu .res-menu {
+  .main-menu .res-menu {
     display: block;
   }
   .main-menu .res-menu .logo2 {
@@ -18,7 +18,7 @@
   }
   .main-menu ul ul li {
     width: 100%;
-  } */
+  }
 
   .getStarted {
     height: 500px;

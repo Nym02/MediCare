@@ -30,20 +30,7 @@ jQuery(document).ready(function() {
     jQuery('html').animate({ scrollTop: '0' }, 500);
     return false;
   });
-  //   jQuery(window).scroll(function() {
-  //     let area = jQuery(window).scrollTop();
-  //     let scroll = jQuery('.main-menu').outerHeight();
-  //     if (area > scroll) {
-  //       jQuery('.main-menu').addClass('fixed');
-  //     } else {
-  //       jQuery('.main-menu').removeClass('fixed');
-  //     }
-  //     if (area > 200) {
-  //       jQuery('.scroll').fadeIn(500);
-  //     } else {
-  //       jQuery('.scroll').fadeOut(500);
-  //     }
-  //   });
+
   jQuery('.main-menu ul ul')
     .parent('li')
     .children('a')
