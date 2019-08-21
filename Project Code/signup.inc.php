@@ -14,7 +14,6 @@ if (isset($_POST['submit'])) {
     $userImg = $_FILES['imgUpload']['name'];
     $userImgTmpName = $_FILES['imgUpload']['tmp_name'];
     $targetFile = $folder . $userImg;
-
     move_uploaded_file($userImgTmpName, $folder);
 
 
@@ -22,7 +21,7 @@ if (isset($_POST['submit'])) {
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $checkSql)) {
-        header('Location: signup.php?error=sqlerror');
+        header('Location: signup.php?error=sqlerror2');
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, 's', $userName);
@@ -42,7 +41,6 @@ if (isset($_POST['submit'])) {
                 $hashPassword = password_hash($userPassword, PASSWORD_DEFAULT);
                 mysqli_stmt_bind_param($stmt, 'ssssss', $fullName, $userName, $userEmail, $hashPassword, $userPhone, $targetFile);
                 mysqli_stmt_execute($stmt);
-                // mysqli_stmt_store_result($stmt);
                 header('Location: signup.php?signup=success');
                 exit();
             }
