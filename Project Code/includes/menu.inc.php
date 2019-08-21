@@ -27,7 +27,7 @@
                 <li><a href="#">sub menu</a></li>
               </ul> -->
             </li>
-            <li><a href="#">admin</a></li>
+            <li><a href="Alogin.php">admin</a></li>
           </ul>
         </nav>
         <!-- <div class="search">

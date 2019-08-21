@@ -37,7 +37,7 @@
         <div class="signin text-right">
           
           <?php
-            if(isset($_SESSION['username'])){
+            if(isset($_SESSION['adminname'])){
               echo'<a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
             }
             else{

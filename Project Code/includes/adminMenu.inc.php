@@ -8,7 +8,7 @@
             <li><a href="adminHome.php">Home</a> </li>
             <li><a href="viewUser.php">View User</a></li>
             <li><a href="update.php">Update User</a></li>
-            <li><a href="deleteUser.php">Delete User</a></li>
+            <li><a href="delete.php">Delete User</a></li>
           </ul>
         </nav>
       </div>
