@@ -5,10 +5,10 @@
             <a href="#"><i class="fas fa-bars"></i></a>
           </div>
           <ul class="text-center">
-            <li><a href="">Home</a> </li>
-            <li><a href="index.php">View User</a></li>
-            <li><a href="doctorList.php">Update User</a></li>
-            <li><a href="">Delete User</a></li>
+            <li><a href="adminHome.php">Home</a> </li>
+            <li><a href="viewUser.php">View User</a></li>
+            <li><a href="update.php">Update User</a></li>
+            <li><a href="deleteUser.php">Delete User</a></li>
           </ul>
         </nav>
       </div>
