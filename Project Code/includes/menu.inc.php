@@ -28,6 +28,8 @@
               </ul> -->
             </li>
             <li><a href="#">admin</a></li>
+            <li><a href="donor.php">Donor</a></li>
+            <li><a href="findAmbulance.php">Ambulance</a></li>
           </ul>
         </nav>
         <!-- <div class="search">
