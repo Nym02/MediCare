@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 16, 2019 at 10:18 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Aug 21, 2019 at 08:52 AM
+-- Server version: 10.1.38-MariaDB
+-- PHP Version: 7.2.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,20 +25,59 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `ambulance`
+--
+
+CREATE TABLE `ambulance` (
+  `amb_id` int(11) NOT NULL,
+  `amb_name` varchar(255) NOT NULL,
+  `amb_city` varchar(255) NOT NULL,
+  `amb_phone` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ambulance`
+--
+
+INSERT INTO `ambulance` (`amb_id`, `amb_name`, `amb_city`, `amb_phone`) VALUES
+(1, 'one', 'dhaka', '123456'),
+(2, 'two', 'Dhaka', '3442'),
+(3, 'one', 'dhaka', '123456'),
+(4, 'two', 'Dhaka', '3442'),
+(5, 'three', 'khulna', '16423456');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `appointment`
 --
 
 CREATE TABLE `appointment` (
   `ID` int(255) NOT NULL,
   `user_fullname` varchar(255) NOT NULL,
+  `doc_Name` varchar(255) NOT NULL,
   `docDate` varchar(255) NOT NULL,
   `docTime` varchar(255) NOT NULL,
   `userEmail` varchar(255) NOT NULL,
   `userPhone` varchar(255) NOT NULL,
   `userDescription` varchar(255) NOT NULL,
-  `user_ID` int(255) NOT NULL,
+  `userID` int(255) NOT NULL,
   `doc_ID` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `appointment`
+--
+
+INSERT INTO `appointment` (`ID`, `user_fullname`, `doc_Name`, `docDate`, `docTime`, `userEmail`, `userPhone`, `userDescription`, `userID`, `doc_ID`) VALUES
+(5, 'Nayeem M. Muzahid', '', '11/12/2019', '12:00pm-3:00pm', 'nayeemm.muzahid@gmail.com', '01949509823', 'nayeem', 3, 7),
+(6, 'Nasib', '', '13/12/2019', '12:00pm-5:00pm', 'nayeem.explore@gmail.com', '01949509823', 'nothing just testing.', 3, 7),
+(7, 'Dr. Abdur Rahim', '', 'Select Date', 'Friday-12:00pm-3:00pm', 'something@example.com', '01949509823', 'nothing just testing', 5, 6),
+(8, 'Sadat', '', '13/12/2019', '12:00pm-3:00pm', 'something@example.com', '01949509823', 'sdfsdf', 5, 7),
+(9, 'Nahid', '', '13/12/2019', '12:00pm-3:00pm', 'something@example.com', '01949509823', 'nothing', 6, 7),
+(10, 'Nayeem M. Muzahid', 'Dr. Nicholas', '11/12/2019', '12:00pm-5:00pm', 'nayeemm.muzahid@gmail.com', '01949509823', 'nothing', 6, 7),
+(11, 'Saadat Islam', 'Dr. Nicholas', '11/12/2019', '12:00pm-3:00pm', 'saa@goo.com', '0167425987', 'jjjjj', 3, 7),
+(12, 'Saadat Islam', 'Dr. Nicholas', '13/12/2019', '12:00pm-3:00pm', 'saa@goo.com', '0167425987', 'sdasdasd', 8, 7);
 
 -- --------------------------------------------------------
 
@@ -103,6 +142,28 @@ INSERT INTO `doctorslot` (`ID`, `doc_Date1`, `doc_Date2`, `doc_Date3`, `doc_ID`)
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `donors`
+--
+
+CREATE TABLE `donors` (
+  `id` int(11) NOT NULL,
+  `dnr_group` varchar(255) NOT NULL,
+  `dnr_name` varchar(255) NOT NULL,
+  `dnr_address` varchar(255) NOT NULL,
+  `dnr_phone` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `donors`
+--
+
+INSERT INTO `donors` (`id`, `dnr_group`, `dnr_name`, `dnr_address`, `dnr_phone`) VALUES
+(1, 'b+', 'saadat', 'babafd', '6489479'),
+(2, 'a-', 'islam', 'asdf', '97465');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -111,22 +172,34 @@ CREATE TABLE `users` (
   `userFullName` varchar(255) NOT NULL,
   `userName` varchar(255) NOT NULL,
   `userEmail` varchar(255) NOT NULL,
-  `userPassword` varchar(255) NOT NULL
+  `userPassword` varchar(255) NOT NULL,
+  `userPhone` varchar(255) NOT NULL,
+  `userImg` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`userID`, `userFullName`, `userName`, `userEmail`, `userPassword`) VALUES
-(1, 'Nayeem M. Muzahid', 'Nym02', 'nayeem.explore@gmail.com', 'nayeem161'),
-(2, 'The Bengal Sheikh', 'nayeem_muzahid', 'nayeemm.muzahid@gmail.com', '12345678'),
-(3, 'Nayeem M. Muzahid', 'nym03', 'something@example.com', '$2y$10$/4nJhBg80JYweOWLfWT/FOsBMVSa4yF1QGLL9xHRi1fIGiggr.C4y'),
-(4, 'Nayeem M. Muzahid', 'Nym03', 'nayeemm.muzahid@gmail.com', '$2y$10$/E71HAMX455gmne4xLgqCOJ8esa96ConsP9Kyps0o9kcRQ1OXngxi');
+INSERT INTO `users` (`userID`, `userFullName`, `userName`, `userEmail`, `userPassword`, `userPhone`, `userImg`) VALUES
+(1, 'Nayeem M. Muzahid', 'Nym02', 'nayeem.explore@gmail.com', 'nayeem161', '', ''),
+(2, 'The Bengal Sheikh', 'nayeem_muzahid', 'nayeemm.muzahid@gmail.com', '12345678', '', ''),
+(3, 'Nayeem M. Muzahid', 'nym03', 'something@example.com', '$2y$10$/4nJhBg80JYweOWLfWT/FOsBMVSa4yF1QGLL9xHRi1fIGiggr.C4y', '', ''),
+(4, 'Nayeem M. Muzahid', 'Nym03', 'nayeemm.muzahid@gmail.com', '$2y$10$/E71HAMX455gmne4xLgqCOJ8esa96ConsP9Kyps0o9kcRQ1OXngxi', '', ''),
+(5, 'nene', 'nene', 'something@example.com', '$2y$10$69/xTeLjAuRtd0i0rIK6aeXSnriJYOQnI8.Eqq9Rwv5VUwpT1OOpK', '', ''),
+(6, 'Nahid', 'nym04', 'something@example.com', '$2y$10$.g7ImDAFSFj75skrwd1vdOV/8kkyvH6njVtypnqGXKzCbEf7MEgue', '', ''),
+(7, 'Md. Abu Nasib', 'nasib48', 'abu.nasib@northsouth.edu', '$2y$10$Soi1MUZdfofIrcl.dYv65ej6/Rbk/N8Xp.Mp6edmDCXgFrQXhTF1O', '', ''),
+(8, 'Saadat Islam', 'saadat', 'saa@goo.com', '$2y$10$IFyumJF0srcHXWqNOOtTLOwIeliGAJpY/9NLRv9PXAdYv/IhlBhPS', '0167425987', 'uploads/');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `ambulance`
+--
+ALTER TABLE `ambulance`
+  ADD PRIMARY KEY (`amb_id`);
 
 --
 -- Indexes for table `appointment`
@@ -147,6 +220,12 @@ ALTER TABLE `doctorslot`
   ADD PRIMARY KEY (`ID`);
 
 --
+-- Indexes for table `donors`
+--
+ALTER TABLE `donors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -157,10 +236,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `ambulance`
+--
+ALTER TABLE `ambulance`
+  MODIFY `amb_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `doctors`
@@ -175,10 +260,16 @@ ALTER TABLE `doctorslot`
   MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `donors`
+--
+ALTER TABLE `donors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `userID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
