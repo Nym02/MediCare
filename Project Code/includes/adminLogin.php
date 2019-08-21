@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
                     session_start();
                     $_SESSION['ID']= $row['adminId'];
                     $_SESSION['adminname']= $row['adminUserName'];
-                    header("Location: ../Admin/Ahome.php?login=success");
+                    header("Location: ../adminHome.php?login=success");
                     exit();
                 }
                 else{
