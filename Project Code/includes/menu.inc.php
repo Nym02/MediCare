@@ -9,13 +9,13 @@
             <li><a href="doctorList.php">doctors</a></li>
             <li>
               <a href="javascript:void(0)">make appointment</a>
-              <!-- <ul>
+              <ul>
                 <li><a href="#">sub menu</a></li>
                 <li><a href="#">sub menu</a></li>
                 <li><a href="#">sub menu</a></li>
                 <li><a href="#">sub menu</a></li>
                 <li><a href="#">sub menu</a></li>
-              </ul> -->
+              </ul>
             </li>
             <li>
               <a href="javascript:void(0)">search</a>
@@ -28,6 +28,8 @@
               </ul> -->
             </li>
             <li><a href="Alogin.php">admin</a></li>
+            <li><a href="donor.php">Donor</a></li>
+            <li><a href="findAmbulance.php">Ambulance</a></li>
           </ul>
         </nav>
         <!-- <div class="search">
