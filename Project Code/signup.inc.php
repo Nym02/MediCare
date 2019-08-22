@@ -8,12 +8,13 @@ if (isset($_POST['submit'])) {
     $userEmail = $_POST['uemail'];
     $userPassword = $_POST['upass'];
     $userPhone = $_POST['uphone'];
+    $userImg = $_FILES['imgUpload'];
 
 
     $folder = "uploads/";
-    $userImg = $_FILES['imgUpload']['name'];
+    $userImgName = $_FILES['imgUpload']['name'];
     $userImgTmpName = $_FILES['imgUpload']['tmp_name'];
-    $targetFile = $folder . $userImg;
+    $targetFile = $folder . $userImgName;
     move_uploaded_file($userImgTmpName, $folder);
 
 
