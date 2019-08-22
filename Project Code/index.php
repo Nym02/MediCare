@@ -62,7 +62,7 @@ session_start();
         We at MediCare are always fully focused on helping patients to
         overcame any hurdle, whether it’s chicken pox or just a seasonal flue.
       </h3>
-      <button>get started</button>
+      <button>browse doctors</button>
     </div>
   </section>
 
