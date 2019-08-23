@@ -6,6 +6,7 @@
           </div>
           <ul class="text-center">
             <li><a href="adminHome.php">Home</a> </li>
+            <li><a href="updateDoctor.php">Update Doctor</a></li>
             <li><a href="viewUser.php">View User</a></li>
             <li><a href="update.php">Update User</a></li>
             <li><a href="delete.php">Delete User</a></li>
