@@ -40,11 +40,11 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-    <header>
+    <header class="header-area">
 
         <?php
 
-        include 'includes/menu.inc.php';
+        include 'logo.inc.php';
         ?>
     </header>
     <section class="doctors">
