@@ -41,7 +41,7 @@ $result = mysqli_query($conn,$sql);
         <div class="container">
             <div class="row">
             <?php while($row = mysqli_fetch_assoc($result)) {
-              if (mysqli_num_rows($row)<1) {
+              if (mysqli_num_rows($result)<1) {
                 echo " no match found";
               }?>
                 <div class="col-md-6">
@@ -49,7 +49,7 @@ $result = mysqli_query($conn,$sql);
 
                        <div class="col-md-6">
                             <div class="doc__photo">
-                                    <a href="doctorDetails.php?page=doctorDetails&ID=<?php echo $row['amb_id'] ?>"><img src="../img/author.jpg" alt="<?php echo $row['amb_name'] ?>"></a>
+                                    <a href="doctorDetails.php?page=doctorDetails&ID=<?php echo $row['amb_id'] ?>"><img src="../img/amb.jpg" alt="<?php echo $row['amb_name'] ?>"></a>
                                 </div>
 
                        </div>

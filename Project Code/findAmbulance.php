@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Doctor || MediCare</title>
+    <title>Ambulanc || MediCare</title>
 
     <link rel="stylesheet" href="css/all.min.css" />
 
@@ -32,7 +32,7 @@
 
                     <form action="includes/findAmbulance.inc.php" method="POST" onsubmit="return docRegValidation();" class="form-area">
                             <div class="form-header">
-                                    <h3 class="mb-5">Doctor</h3>
+                                    <h3 class="mb-5">Ambulance</h3>
                                 </div>
 
                                 <?php
