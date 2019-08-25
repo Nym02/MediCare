@@ -53,8 +53,9 @@ $result = mysqli_query($conn,$sql);
                        <div class="col-md-6 mt-5">
                             <div class="doc__info">
                                     <h3>Name : <?php echo $row['doc_Fullname'] ?></h3>
-                                    <h4><strong>Specialization:</strong><?php echo "$search" ?> </h4>
                                     <h4><strong>Email:</strong><?php echo $row['doc_Email'] ?> </h4>
+                                    <h4><strong>Specialization 1:</strong><?php echo $row['doc_Specialization1'] ?> </h4>
+                                    <h4><strong>Specialization 2:</strong><?php echo $row['doc_Specialization2'] ?> </h4>
                                     <p class="docTime"><strong>Phone : </strong> <?php echo $row['doc_PhoneNumber'] ?> </p>
 
                                 </div>
