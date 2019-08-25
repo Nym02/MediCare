@@ -67,8 +67,11 @@
             <label id="pass__label1"></label>
           </div>
           
-          <div class="loginWith">
+          <!-- <div class="loginWith">
             <a href='#'>Log in with Facebook</a >
+          </div> -->
+          <div class="loginWith">
+            <a href='#' scope="public_profile,email" onlogin="checkLoginState();">Log in with Facebook</a >
           </div>
           <input
              class="btn btn-outline-dark "
@@ -82,11 +85,43 @@
       </div>
       
       
+      <!-- <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+  </fb:login-button> -->
+      
       <div class="form-footer">
         <a href="signup.php">Create An Account.</a>
       </div>
     </div>
 
     <script src="js/form-validation.js"></script>
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{519024735517232}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   </body>
 </html>
