@@ -23,11 +23,13 @@
         <li><a href="index.php">home</a></li>
         <li><a href="doctorList.php">doctors</a></li>
         <li>
-          <a href="javascript:void(0)">make appointment</a>
+
+          <a href="doctorList.php">make appointment</a>
 
         </li>
         <li>
-          <a href="javascript:void(0)">search</a>
+          <a href="search.php">search</a>
+
 
 
         </li>
