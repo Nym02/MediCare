@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- css files -->
-    <link rel="stylesheet" href="css/all.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/login.css" />
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/index1Res.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans"
-      rel="stylesheet"
-    />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Login</title>
 
-    <!-- js files- -->
+  <!-- css files -->
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/index1Res.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/index.js"></script>
-  </head>
-  <body>
-    <header>
-      <!-- <?php include'includes/menu.inc.php'; ?> -->
-    </header>
-    <div class="main">
-      <div class="loginForm">
-        <h1 class="text-center text-dark">Login</h1>
 
-        <?php
-          if(isset($_GET['error'])){
-            if($_GET['error']=="emptyField"){
-              echo'<div class="loginErrorMsg">
+  <!-- js files- -->
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <?php include 'menu.inc.php'; ?>
+  </header>
+  <div class="main">
+    <div class="loginForm">
+      <h1 class="text-center text-dark">Login</h1>
+
+      <?php
+      if (isset($_GET['error'])) {
+        if ($_GET['error'] == "emptyField") {
+          echo '<div class="loginErrorMsg">
               <p id="errorMsg">Fill in all the empty fields</p>
   
             </div>';
-            }
-            else if($_GET['error']=='sqlerror'){
-              echo'<div class="loginErrorMsg">
+        } else if ($_GET['error'] == 'sqlerror') {
+          echo '<div class="loginErrorMsg">
               <p id="errorMsg">There is problem with the DB.</p>
   
             </div>';
-            }
-            else if($_GET['error']=='wrongpassword'){
-              echo'<div class="loginErrorMsg">
+        } else if ($_GET['error'] == 'wrongpassword') {
+          echo '<div class="loginErrorMsg">
               <p id="errorMsg">Invalid username and password.</p>
   
             </div>';
+
             }
           }
         ?>
@@ -90,12 +90,14 @@
   onlogin="checkLoginState();">
   </fb:login-button> -->
       
+
       <div class="form-footer">
         <a href="signup.php">Create An Account.</a>
       </div>
     </div>
 
     <script src="js/form-validation.js"></script>
+
     <script>
   window.fbAsyncInit = function() {
     FB.init({
@@ -125,3 +127,4 @@
 </script>
   </body>
 </html>
+

@@ -65,6 +65,16 @@ if (isset($_SESSION['username']) == true) {
     <script src="js/index.js"></script>
 
 
+
+    <style>
+    input{
+        background-color: #F8F9FA;
+        border: none;
+    }
+    
+    </style>
+
+
 </head>
 
 <body>
@@ -140,13 +150,19 @@ if (isset($_SESSION['username']) == true) {
                                             <tbody>
                                                 <?php while ($rowCount = mysqli_fetch_array($result4)) { ?>
                                                 <tr>
-                                                    <th scope="row">1</th>
+                                                <form action='includes/deleteAppoint.inc.php' method=POST>
+
+                                                    <td><input type="text" name="id" value="<?php echo $rowCount['ID'] ?>"disabled="disabled">
+                                                    <input type="hidden" name="id" value="<?php echo $rowCount['ID'] ?>">
+                                                    </td>
                                                     <td><?php echo $rowCount['user_fullname'] ?></td>
                                                     <td><?php echo $rowCount['doc_Name'] ?></td>
                                                     <td><?php echo $rowCount['docDate'] ?></td>
                                                     <td><?php echo $rowCount['docTime'] ?></td>
                                                     <td><?php echo $rowCount['userPhone'] ?></td>
-                                                    <td><a href="userProfile.php?page=userProfile&ID=<?php echo $rowCount['ID']  ?> " class="btn btn-danger">X</a></td>
+                                                    <td>                                                   
+                                                    <input class="btn btn-danger" type="submit" name="submit" value="X"></td>
+                                                    </form>
                                                 </tr>
                                                 <?php } ?>
 
