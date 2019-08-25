@@ -1,11 +1,14 @@
 <?php
 session_start();
 
+
 if (isset($_SESSION['username'])) {
 $cookie_name = "users";
 $cookie_value = $_SESSION['username'];
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 }
+require 'includes/dbh.inc.php';
+
 ?>
 
 
@@ -26,38 +29,12 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/index1Res.css" />
 
-  <!-- js files -->
 
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/index.js"></script>
 </head>
 
 <body>
   <header class="header-area">
-    <!---header area starts----->
-    <div class="logo-bar">
-      <!---logo area starts----->
-      <div class="logo"><a href="index1.html">MediCare</a></div>
-      <div class="signin text-right">
-
-        <?php
-        if (isset($_SESSION['username'])) {
-          echo '<a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
-        } else {
-          echo ' <a href="login.php" class="btn btn-outline-dark "> Login</a>
-              <a href="signup.php" class="btn btn-outline-dark"> Register</a>';
-        }
-        ?>
-
-
-      </div>
-    </div>
-    <!-------logo area ends----->
-
-    <?php include 'includes/menu.inc.php'; ?>
+    <?php require 'logo.inc.php' ?>
   </header>
 
   <section class="getStarted">
@@ -77,6 +54,7 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
         <div class="col-md-6 col-sm-12 introDoc__text">
           <h2>Welcome</h2>
           <p class="lead">
+
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             sunt sed voluptate ducimus, culpa porro suscipit aliquid eligendi
             officiis esse modi voluptatum ut quisquam hic! Laborum non,
@@ -183,6 +161,22 @@ setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1
       </div>
     </div>
   </section>
+  <!-- js files -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/index.js"></script>
+
+
+  <script>
+    $(document).ready(function() {
+      $('.dropdown-toggle').dropdown()
+    });
+  </script>
+
+
 </body>
 
 </html>

@@ -50,9 +50,11 @@ if (isset($_SESSION['username']) == true) {
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/index1Res.css" />
-    <link rel="stylesheet" href="css/userProfile.css">
+
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <link rel="stylesheet" href="css/index1Res.css" type="text/css" />
+    <link rel="stylesheet" href="css/userProfile.css" type="text/css">
+
 
     <!-- js files -->
 
@@ -61,9 +63,14 @@ if (isset($_SESSION['username']) == true) {
     <script src="js/popper.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/index.js"></script>
+
+
 </head>
 
 <body>
+    <header class="header-area">
+        <?php include 'logo.inc.php' ?>
+    </header>
     <section class="users">
         <div class="container">
             <div class="row mt-5 pt-5">
@@ -117,33 +124,35 @@ if (isset($_SESSION['username']) == true) {
                                 </div>
                                 <div class="col-md-12">
                                     <h1>Appointments: </h1>
-                                    <table class="table tableInfo table-dark">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <th scope="col">Name</th>
-                                                <th scope="col">Doctor Name</th>
-                                                <th scope="col">Date</th>
-                                                <th scope="col">Time</th>
-                                                <th scope="col">Phone</th>
+                                    <div class="table-responsive-sm table-responsive-md table-responsive-lg">
+                                        <table class="table tableInfo">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">#</th>
+                                                    <th scope="col">Name</th>
+                                                    <th scope="col">Doctor Name</th>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Time</th>
+                                                    <th scope="col">Phone</th>
 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php while ($rowCount = mysqli_fetch_array($result4)) { ?>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td><?php echo $rowCount['user_fullname'] ?></td>
-                                                <td><?php echo $rowCount['doc_Name'] ?></td>
-                                                <td><?php echo $rowCount['docDate'] ?></td>
-                                                <td><?php echo $rowCount['docTime'] ?></td>
-                                                <td><?php echo $rowCount['userPhone'] ?></td>
-                                                <td><a href="userProfile.php?page=userProfile&ID=<?php echo $rowCount['ID']  ?> " class="btn btn-danger">X</a></td>
-                                            </tr>
-                                            <?php } ?>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <?php while ($rowCount = mysqli_fetch_array($result4)) { ?>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td><?php echo $rowCount['user_fullname'] ?></td>
+                                                    <td><?php echo $rowCount['doc_Name'] ?></td>
+                                                    <td><?php echo $rowCount['docDate'] ?></td>
+                                                    <td><?php echo $rowCount['docTime'] ?></td>
+                                                    <td><?php echo $rowCount['userPhone'] ?></td>
+                                                    <td><a href="userProfile.php?page=userProfile&ID=<?php echo $rowCount['ID']  ?> " class="btn btn-danger">X</a></td>
+                                                </tr>
+                                                <?php } ?>
 
-                                        </tbody>
-                                    </table>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
 

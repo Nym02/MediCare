@@ -18,7 +18,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 99; */
   font-family: 'Open Sans', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 .main h1 {
@@ -54,7 +54,7 @@ body {
 
   margin-bottom: 3px;
 }
-.main input::placeholder{
+.main input::placeholder {
   font-size: 14px;
   color: rgba(0, 17, 255, 0.685);
 }
@@ -67,7 +67,7 @@ body {
   margin-left: 53px;
   font-size: 13px;
 }
-.loginErrorMsg #errorMsg{
+.loginErrorMsg #errorMsg {
   text-align: center;
   font-size: 14px;
   color: rgb(255, 0, 0);
@@ -137,6 +137,39 @@ body {
     padding: 5px 53px;
   }
   .forgot__pass a {
-    margin-left: 70px;
+    margin-left: 35px;
+    margin-top: 10px;
+  }
+  .loginWith a {
+    padding: 5px 52px;
+  }
+}
+
+@media (max-width: 556px) {
+  .main {
+    width: 300px;
+  }
+  .loginWith a {
+    padding: 5px 9px;
+  }
+  .forgot__pass a {
+    margin-left: 23px;
+    font-size: 12px;
+    margin-top: 30px;
+  }
+  .main input[type='text'] {
+    padding: 7px 20px;
+  }
+  .main input[type='password'] {
+    padding: 7px 20px;
+  }
+  .main .form-footer {
+    margin-top: 55px;
+
+    padding: 14px 0;
+  }
+  .main h1 {
+    padding: 25px;
+    margin-top: 1px;
   }
 }

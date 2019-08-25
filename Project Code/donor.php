@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Add Doctor || MediCare</title>
+    <title>Donor || MediCare</title>
 
     <link rel="stylesheet" href="css/all.min.css" />
 
@@ -29,10 +29,10 @@
 
     <section class="form">
         <div class="form-body">
-
-                    <form action="includes/donor.inc.php" method="POST" onsubmit="return docRegValidation();" class="form-area">
+<!-- onsubmit="return docRegValidation();" -->
+                    <form action="includes/donor.inc.php" method="POST"  class="form-area" pattern="/[aa\+bb\+c\+o\-]/i">
                             <div class="form-header">
-                                    <h3 class="mb-5">Doctor</h3>
+                                    <h3 class="mb-5">Donors</h3>
                                 </div>
 
                                 <?php
@@ -57,8 +57,8 @@
                         type="text"
 
                         name="search"
-                        placeholder="Enter Blood Group">
-                        <label id="Enter YU"></label>
+                        placeholder="Enter Blood Group" require>
+                        <label id="Enter YU" ></label>
 
 
 

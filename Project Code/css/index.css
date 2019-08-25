@@ -52,6 +52,9 @@ body {
 .header-area .logo-bar .signin .fas {
   font-size: 20px;
 }
+.dropdown {
+  z-index: 10000000;
+}
 
 /* ----------------logo area ends here----------------------- */
 

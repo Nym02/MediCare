@@ -4,7 +4,11 @@ require 'dbh.inc.php';
 $search = mysqli_real_escape_string($conn,$_POST['search']);
 
 $sql = "SELECT * FROM donors WHERE dnr_group='$search'";
+
+
 $result = mysqli_query($conn,$sql);
+$rowcount = mysqli_num_rows($result);
+
 
 
 ?>
@@ -40,7 +44,17 @@ $result = mysqli_query($conn,$sql);
     <section class="doctors">
         <div class="container">
             <div class="row">
-            <?php while($row = mysqli_fetch_assoc($result)) { ?>
+            <?php while($row = mysqli_fetch_assoc($result)) {
+              $rowcount=$row[0];
+
+                  if($rowcount<1){
+                    echo "Empty";
+                    header("Location: ../donor.php?add=success");
+                    exit();
+                  }
+
+                  else{
+               ?>
                 <div class="col-md-6">
                    <div class="row">
 
@@ -59,8 +73,9 @@ $result = mysqli_query($conn,$sql);
                                 </div>
                        </div>
                    </div>
+                    <?php  } ?>
                 </div>
-                   <?php } ?>
+                   <?php  } ?>
             </div>
         </div>
     </section>

@@ -72,13 +72,19 @@ html {
 @media (max-width: 768px) {
 }
 @media (max-width: 556px) {
+  .form-body {
+    background: #fff;
+    margin: 40px auto 23px;
+    border-radius: 7px;
+    width: 298px;
+  }
   .form-area {
     text-align: center;
     padding: 2rem 4rem;
   }
   .form-area input {
     display: block;
-    padding: 0.5rem 4.5rem;
+    padding: 0.5rem 2.5rem;
     margin: auto;
 
     font-size: 1.2rem;
