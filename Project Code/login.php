@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="css/index1Res.css" />
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
 
+
   <!-- js files- -->
+
 
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -49,30 +51,45 @@
               <p id="errorMsg">Invalid username and password.</p>
   
             </div>';
-        }
-      }
-      ?>
-      <form action="includes/signin.inc.php" method="POST" onsubmit="return loginValidation();">
-        <div class="form-input">
-          <!-- <i class="fas fa-user"></i> -->
-          <input type="text" id="userEmail" name="userEmail" placeholder="Enter Your Email/Username" />
-          <label for="" id="email__label1"></label>
-        </div>
-        <div class="form-input">
-          <!-- <i class="fas fa-lock"></i> -->
-          <input type="password" id="userPassword" name="userPassword" placeholder="Enter Your Password" />
-          <label id="pass__label1"></label>
-        </div>
 
-        <div class="loginWith">
-          <a href='#'>Log in with Facebook</a>
-        </div>
-        <input class="btn btn-outline-dark " type="submit" name="submit" value="Login" />
-      </form>
-      <div class="forgot__pass">
-        <a href="#">Forgot Password?</a>
+            }
+          }
+        ?>
+        <form action="includes/signin.inc.php" method="POST" onsubmit="return loginValidation();">
+          <div class="form-input">
+            <!-- <i class="fas fa-user"></i> -->
+            <input type="text" id="userEmail" name="userEmail" placeholder="Enter Your Email/Username" />
+            <label for="" id="email__label1"></label>
+          </div>
+          <div class="form-input">
+            <!-- <i class="fas fa-lock"></i> -->
+            <input type="password" id="userPassword" name="userPassword" placeholder="Enter Your Password" />
+            <label id="pass__label1"></label>
+          </div>
+          
+          <!-- <div class="loginWith">
+            <a href='#'>Log in with Facebook</a >
+          </div> -->
+          <div class="loginWith">
+            <a href='#' scope="public_profile,email" onlogin="checkLoginState();">Log in with Facebook</a >
+          </div>
+          <input
+             class="btn btn-outline-dark "
+             type="submit"
+             name="submit"
+             value="Login"
+        />
+        </form>
+          <div class="forgot__pass">
+            <a href="#">Forgot Password?</a>
       </div>
-
+      
+      
+      <!-- <fb:login-button 
+  scope="public_profile,email"
+  onlogin="checkLoginState();">
+  </fb:login-button> -->
+      
 
       <div class="form-footer">
         <a href="signup.php">Create An Account.</a>
@@ -80,6 +97,34 @@
     </div>
 
     <script src="js/form-validation.js"></script>
-</body>
 
+    <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{519024735517232}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  function checkLoginState() {
+  FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+  });
+}
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+  </body>
 </html>
+
