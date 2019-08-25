@@ -57,7 +57,7 @@
                         type="text"
 
                         name="search"
-                        placeholder="Enter Blood Group">
+                        placeholder="Enter Query">
                         <label id="Enter YU"></label>
 
 
