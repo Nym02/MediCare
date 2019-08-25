@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 21, 2019 at 08:52 AM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.2.15
+-- Generation Time: Aug 23, 2019 at 09:31 PM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 5.6.39
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `docapp`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admins`
+--
+
+CREATE TABLE `admins` (
+  `adminId` int(100) NOT NULL,
+  `adminFullName` varchar(255) NOT NULL,
+  `adminUserName` varchar(255) NOT NULL,
+  `adminEmail` varchar(255) NOT NULL,
+  `adminPassword` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admins`
+--
+
+INSERT INTO `admins` (`adminId`, `adminFullName`, `adminUserName`, `adminEmail`, `adminPassword`) VALUES
+(1, 'Md. Abu Nasib', 'Nasib', 'nasib@gmail.com', '$2y$10$LiarEyMorP5ysm6NG1MHPO3bnq39wkMro/mfCjOEaRAJECoDjuL8G'),
+(2, 'Nayeem M. Muzahid', 'Nayeem', 'nayeem@gmail.com', '$2y$10$xA824zacFEGVRwelmh2nPOa8mzrn2pqkIs64ENH.0zbZZE7Jd.qMm');
 
 -- --------------------------------------------------------
 
@@ -185,15 +207,24 @@ INSERT INTO `users` (`userID`, `userFullName`, `userName`, `userEmail`, `userPas
 (1, 'Nayeem M. Muzahid', 'Nym02', 'nayeem.explore@gmail.com', 'nayeem161', '', ''),
 (2, 'The Bengal Sheikh', 'nayeem_muzahid', 'nayeemm.muzahid@gmail.com', '12345678', '', ''),
 (3, 'Nayeem M. Muzahid', 'nym03', 'something@example.com', '$2y$10$/4nJhBg80JYweOWLfWT/FOsBMVSa4yF1QGLL9xHRi1fIGiggr.C4y', '', ''),
-(4, 'Nayeem M. Muzahid', 'Nym03', 'nayeemm.muzahid@gmail.com', '$2y$10$/E71HAMX455gmne4xLgqCOJ8esa96ConsP9Kyps0o9kcRQ1OXngxi', '', ''),
+(4, 'Nayeem M. Muzahid', 'Nym03', 'nayeemm.muzahid@gmail.com', 'nayeem12345', '', ''),
 (5, 'nene', 'nene', 'something@example.com', '$2y$10$69/xTeLjAuRtd0i0rIK6aeXSnriJYOQnI8.Eqq9Rwv5VUwpT1OOpK', '', ''),
 (6, 'Nahid', 'nym04', 'something@example.com', '$2y$10$.g7ImDAFSFj75skrwd1vdOV/8kkyvH6njVtypnqGXKzCbEf7MEgue', '', ''),
 (7, 'Md. Abu Nasib', 'nasib48', 'abu.nasib@northsouth.edu', '$2y$10$Soi1MUZdfofIrcl.dYv65ej6/Rbk/N8Xp.Mp6edmDCXgFrQXhTF1O', '', ''),
-(8, 'Saadat Islam', 'saadat', 'saa@goo.com', '$2y$10$IFyumJF0srcHXWqNOOtTLOwIeliGAJpY/9NLRv9PXAdYv/IhlBhPS', '0167425987', 'uploads/');
+(8, 'Saadat Islam', 'saadat', 'saa@goo.com', '$2y$10$IFyumJF0srcHXWqNOOtTLOwIeliGAJpY/9NLRv9PXAdYv/IhlBhPS', '0167425987', 'uploads/'),
+(9, 'Asad', 'Asad03', 'asad@gmail.com', '$2y$10$LiarEyMorP5ysm6NG1MHPO3bnq39wkMro/mfCjOEaRAJECoDjuL8G', '01745824568', 'uploads/'),
+(10, 'Arafat', 'arafat04', 'arafat@gmail.com', '$2y$10$xA824zacFEGVRwelmh2nPOa8mzrn2pqkIs64ENH.0zbZZE7Jd.qMm', '01745824568', 'uploads/'),
+(11, 'Nayeem M. Muzahid', 'nym00', 'sdf@nsu.com.in', 'nayeem162', '01948491095', 'uploads/');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `admins`
+--
+ALTER TABLE `admins`
+  ADD PRIMARY KEY (`adminId`);
 
 --
 -- Indexes for table `ambulance`
@@ -236,6 +267,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `admins`
+--
+ALTER TABLE `admins`
+  MODIFY `adminId` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `ambulance`
 --
 ALTER TABLE `ambulance`
@@ -269,7 +306,7 @@ ALTER TABLE `donors`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `userID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `userID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
