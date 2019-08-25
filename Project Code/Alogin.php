@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <?php include'includes/menu.inc.php'; ?>
+      <?php include'menu.inc.php'; ?>
     </header>
     <div class="main">
       <div class="loginForm">
