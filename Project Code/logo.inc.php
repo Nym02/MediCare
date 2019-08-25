@@ -19,7 +19,12 @@
 
                 echo '<a href="userProfile.php" class="btn btn-outline-dark ">' . $userName . ' </a>
           <a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
-            } else {
+            } else if(isset($_SESSION['name'])){
+                echo '<a href="userProfile.php" class="btn btn-outline-dark ">' . $_SESSION['name'] . ' </a>
+                <a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
+            }
+            
+            else {
                 echo ' <a href="login.php" class="btn btn-outline-dark "> Login</a>
               <a href="signup.php" class="btn btn-outline-dark"> Register</a>';
             }

@@ -7,6 +7,13 @@ $cookie_name = "users";
 $cookie_value = $_SESSION['username'];
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 }
+
+if (isset($_SESSION['name'])) {
+  $cookie_name = "facebook";
+  $cookie_value = $_SESSION['name'];
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+  }
+
 require 'includes/dbh.inc.php';
 
 ?>
