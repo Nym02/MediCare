@@ -56,7 +56,7 @@ if (isset($_SESSION['username'])) {
                 <label for="exampleFormControlTextarea1">Write Review</label>
                 <textarea name="textArea" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
-            <input type="submit" name="submit" value="Write" class="btn btn-danger">
+            <input type="submit" name="submit" value="Write" class="btn btn-danger mb-5">
         </form>
     </div>
     <?php } ?>

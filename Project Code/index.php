@@ -3,9 +3,9 @@ session_start();
 
 
 if (isset($_SESSION['username'])) {
-$cookie_name = "users";
-$cookie_value = $_SESSION['username'];
-setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+  $cookie_name = "users";
+  $cookie_value = $_SESSION['username'];
+  setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
 }
 
 if (isset($_SESSION['name'])) {
@@ -134,40 +134,27 @@ require 'includes/dbh.inc.php';
           <div class="service__header">
             <h2>Reviews</h2>
           </div>
+          <?php
+          $sql = "SELECT * FROM reviews";
+          $result = mysqli_query($conn, $sql);
+
+          ?>
           <div class="service__contents owl-carousel">
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <div class=".review__contents-1 ">
               <p class="lead">
-                <span>Radiologists</span> are medical doctors that specialize
-                in diagnosing and treating injuries and diseases using medical
-                imaging
-                <span>(radiology)</span>
-                procedures (exams/tests) such as X-rays, computed tomography
-                (CT), magnetic resonance imaging (MRI), nuclear medicine,
-                positron emission tomography (PET) and ultrasound.
+                <?php echo $row['review']; ?>
               </p>
             </div>
-            <div class=".review__contents-1 ">
-              <p class="lead">
-                <span>Cancer</span> is a group of diseases involving abnormal
-                cell growth with the potential to invade or spread to other
-                parts of the body. These contrast with benign tumors, which do
-                not spread.
-              </p>
-            </div>
-            <div class=".review__contents-1 ">
-              <p class="lead">
-                <span>Cardiovascular</span> disease generally refers to
-                conditions that involve narrowed or blocked blood vessels that
-                can lead to a <span>heart attack</span>, chest pain (angina)
-                or stroke.
-              </p>
-            </div>
+            <?php } ?>
+
           </div>
-          <button class="btn btn-danger mb-2 mt-2">Explore</button>
+          <a href="reviewForm.php" class="btn btn-danger">Write Review</a>
         </div>
       </div>
     </div>
   </section>
+  <?php include 'includes/footer.inc.php'; ?>
   <!-- js files -->
 
   <script src="js/jquery.js"></script>
