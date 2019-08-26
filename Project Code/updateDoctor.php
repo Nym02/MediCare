@@ -58,8 +58,7 @@ session_start();
         if (isset($_SESSION['username'])) {
           echo '<a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
         } else {
-          echo ' <a href="login.php" class="btn btn-outline-dark "> Login</a>
-              <a href="signup.php" class="btn btn-outline-dark"> Register</a>';
+          echo ' <a href="Alogin.php" class="btn btn-outline-dark "> Login</a>';
         }
         ?>
 
