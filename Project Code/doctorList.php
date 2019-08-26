@@ -1,4 +1,5 @@
 <?php
+// session_start();
 require 'includes/dbh.inc.php';
 
 
@@ -44,7 +45,7 @@ $result = mysqli_query($conn, $sql);
 
         <?php
 
-        include 'logo.inc.php';
+        include 'menu.inc.php';
         ?>
     </header>
     <section class="doctors">
