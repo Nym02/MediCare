@@ -127,18 +127,19 @@ require 'includes/dbh.inc.php';
           <div class="service__header">
             <h2>Reviews</h2>
           </div>
+          <?php
+          $sql = "SELECT * FROM reviews";
+          $result = mysqli_query($conn, $sql);
+
+          ?>
           <div class="service__contents owl-carousel">
+            <?php while ($row = mysqli_fetch_assoc($result)) { ?>
             <div class=".review__contents-1 ">
               <p class="lead">
-                <span>Radiologists</span> are medical doctors that specialize
-                in diagnosing and treating injuries and diseases using medical
-                imaging
-                <span>(radiology)</span>
-                procedures (exams/tests) such as X-rays, computed tomography
-                (CT), magnetic resonance imaging (MRI), nuclear medicine,
-                positron emission tomography (PET) and ultrasound.
+                <?php echo $row['review']; ?>
               </p>
             </div>
+            <?php } ?>
 
           </div>
           <a href="reviewForm.php" class="btn btn-danger">Write Review</a>
@@ -146,6 +147,7 @@ require 'includes/dbh.inc.php';
       </div>
     </div>
   </section>
+  <?php include 'includes/footer.inc.php'; ?>
   <!-- js files -->
 
   <script src="js/jquery.js"></script>

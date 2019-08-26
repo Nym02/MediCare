@@ -33,7 +33,7 @@
 
 
         </li>
-        <li><a href="#">admin</a></li>
+        <li><a href="Alogin.php">admin</a></li>
         <li><a href="javascript:void(0)">Services</a>
           <ul>
             <li><a href="donor.php">Blood Donors</a>
