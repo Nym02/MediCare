@@ -54,12 +54,11 @@ session_start();
       <div class="logo"><a href="index1.html">MediCare</a></div>
       <div class="signin text-right">
 
-        <?php
-        if (isset($_SESSION['username'])) {
+       <?php
+        if (isset($_SESSION['adminname'])) {
           echo '<a href="includes/logout.inc.php" class="btn btn-outline-dark"> Logout</a>';
         } else {
-          echo ' <a href="login.php" class="btn btn-outline-dark "> Login</a>
-              <a href="signup.php" class="btn btn-outline-dark"> Register</a>';
+          echo ' <a href="Alogin.php" class="btn btn-outline-dark "> Login</a>';
         }
         ?>
 
