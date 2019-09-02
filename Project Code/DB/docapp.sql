@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 23, 2019 at 09:31 PM
+-- Generation Time: Aug 26, 2019 at 10:49 PM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.39
 
@@ -140,30 +140,6 @@ INSERT INTO `doctors` (`doc_ID`, `doc_Fullname`, `doc_Specialization1`, `doc_Spe
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctorslot`
---
-
-CREATE TABLE `doctorslot` (
-  `ID` int(255) NOT NULL,
-  `doc_Date1` varchar(255) NOT NULL,
-  `doc_Date2` varchar(255) NOT NULL,
-  `doc_Date3` varchar(255) NOT NULL,
-  `doc_ID` int(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `doctorslot`
---
-
-INSERT INTO `doctorslot` (`ID`, `doc_Date1`, `doc_Date2`, `doc_Date3`, `doc_ID`) VALUES
-(1, '15/11/2019', '16/11/2019', '17/11/2019', 3),
-(2, '14/11/2019', '19/11/2019', '20/11/2019', 6),
-(3, '15/11/2019', '16/11/2019', '17/11/2019', 4),
-(4, '14/11/2019', '19/11/2019', '20/11/2019', 5);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `donors`
 --
 
@@ -182,6 +158,28 @@ CREATE TABLE `donors` (
 INSERT INTO `donors` (`id`, `dnr_group`, `dnr_name`, `dnr_address`, `dnr_phone`) VALUES
 (1, 'b+', 'saadat', 'babafd', '6489479'),
 (2, 'a-', 'islam', 'asdf', '97465');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `id` int(50) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `review` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `reviews`
+--
+
+INSERT INTO `reviews` (`id`, `name`, `email`, `review`) VALUES
+(2, 'Nayeem M. Muzahid', 'Nayeem.muzahid@northsouth.edu', 'This is a very good hospital.'),
+(5, 'nasib48', 'abu.nasib@gmail.com', 'Their service is very good. I went their couple of times.'),
+(6, 'Saadat', 'saadat@gmail.com', 'Doctors are highly qualified. And their behaviour is very good.');
 
 -- --------------------------------------------------------
 
@@ -245,15 +243,15 @@ ALTER TABLE `doctors`
   ADD PRIMARY KEY (`doc_ID`);
 
 --
--- Indexes for table `doctorslot`
---
-ALTER TABLE `doctorslot`
-  ADD PRIMARY KEY (`ID`);
-
---
 -- Indexes for table `donors`
 --
 ALTER TABLE `donors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -291,16 +289,16 @@ ALTER TABLE `doctors`
   MODIFY `doc_ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `doctorslot`
---
-ALTER TABLE `doctorslot`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
 -- AUTO_INCREMENT for table `donors`
 --
 ALTER TABLE `donors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `reviews`
+--
+ALTER TABLE `reviews`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
